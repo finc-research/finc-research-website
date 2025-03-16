@@ -1,1 +1,3 @@
-www.finc-research.com
+Type: CNAME
+Name: www.finc-research.com
+Target (or Value): finc-research-website.github.io
