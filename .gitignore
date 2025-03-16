@@ -1,0 +1,13 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+/.quarto/
+Software.qmd
+Software.qmd
+blog.qmd
+blog.quarto_ipynb
+blog_draft.qmd
+finc_hex.R
+media/

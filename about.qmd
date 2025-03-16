@@ -1,0 +1,12 @@
+---
+title: "About us"
+---
+
+We'll be here soon.
+
+
+
+```{r, echo = FALSE, eval = TRUE}
+library(knitr)
+knitr::include_graphics(path = "media/imgfile3.png")
+```

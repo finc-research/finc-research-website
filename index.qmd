@@ -1,0 +1,24 @@
+---
+title: "Welcome to our website"
+page-layout: full
+format: 
+  html:
+    link-external-newwindow: true
+    css: styles.css
+embed-resources: true
+---
+
+We'll be here soon, thanks for dropping by!
+\
+\
+
+[contact\@finc-research.com](email%20:%20%5Bcontact@finc-research.com)
+
+```{r, echo = FALSE, eval = TRUE}
+library(knitr)
+```
+
+```{r, echo = FALSE, eval = TRUE}
+library(knitr)
+knitr::include_graphics(path = "media/imgfile4.png")
+```
