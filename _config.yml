@@ -1,0 +1,5 @@
+title: Finc
+author: Audrey Yeo
+description: Finc Research Company website
+baseurl: "/about" # The subpath of your site, e.g., "/blog". Leave blank for root.
+url: "https://www.finc-research.com" 
