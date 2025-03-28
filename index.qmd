@@ -1,5 +1,5 @@
 ---
-title: "Welcome to our website"
+title: "Finc about us"
 page-layout: full
 format: 
   html:
@@ -8,17 +8,17 @@ format:
 embed-resources: true
 ---
 
-We'll be here soon, thanks for dropping by!
-\
-\
+Finc Research Company is a remote firm specialising in :
 
-[contact\@finc-research.com](email%20:%20%5Bcontact@finc-research.com)
+- Data Science consulting
+- Research Software consulting
+- Speech, text ghost writing
 
-```{r, echo = FALSE, eval = TRUE}
-library(knitr)
-```
+Our services are inclusive to many sectors including small to large scale biotechs, agriculture, non-for-profits, robotics and healthcare.
 
-```{r, echo = FALSE, eval = TRUE}
-library(knitr)
-knitr::include_graphics(path = "media/imgfile4.png")
-```
+![](media/imgfile3.png)
+![](media/imgfile5.png)
+![](media/imgfile.png)
+![](media/imgfile6.png)
+
+

@@ -6,14 +6,16 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: Finc About Us
+      - href: about.qmd
+      - href: dscience.qmd
+        text: Data Science
+      - href: Software.qmd
+        text: Research Software
       - href: blog.qmd
         text: Blog
-      - Blog.qmd
-      - href: software.qmd
-      #   text: Software
-      # - software.qmd
+    
+    
 
 format:
   html:

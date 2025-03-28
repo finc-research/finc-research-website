@@ -1,12 +1,10 @@
 ---
-title: "About us"
+title: "Research Software"
 ---
 
-We'll be here soon.
+coming soon...
 
 
 
-```{r, echo = FALSE, eval = TRUE}
-library(knitr)
-knitr::include_graphics(path = "media/imgfile3.png")
-```
+
+
