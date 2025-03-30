@@ -1,19 +1,24 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "finc"
+  title: ""
+  
   navbar:
     left:
       - href: index.qmd
         text: Finc About Us
-      - href: about.qmd
+      - href: r_adopt.qmd
+        text: Adopting R & Research Software
+      - href: ghostwriting.qmd
+        text: Ghostwriting
       - href: dscience.qmd
         text: Data Science
-      - href: Software.qmd
-        text: Research Software
       - href: blog.qmd
         text: Blog
+      - href: about.qmd
+        text: About Audrey
     
     
 
