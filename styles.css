@@ -39,6 +39,25 @@ body {
 }
 
 
+
+body {
+  margin: 0;
+  font-family: Georgia, Sans-Serif;
+  justify-content: center; /* Only effective if body is a flex container */
+  align-items: center;   /* Only effective if body is a flex container */
+  animation: gradientBackground 30s linear infinite;
+  min-height: 100vh; /* Optional: Ensure at least viewport height */
+}
+
+html {
+  height: 100%; /* Required for body to potentially reach 100% of document height */
+}
+
+body {
+  height: 100%; /* Now this can refer to the full document height */
+}
+
+
 .first {
   margin-top: 50%;
   width: 100%;
