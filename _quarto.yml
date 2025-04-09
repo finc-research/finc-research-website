@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: .
 
 website:
   title: ""
@@ -11,8 +11,6 @@ website:
         text: Finc About Us
       - href: r_adopt.qmd
         text: Adopting R & Research Software
-      - href: ghostwriting.qmd
-        text: Ghostwriting
       - href: dscience.qmd
         text: Data Science
       - href: blog.qmd
