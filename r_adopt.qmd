@@ -1,11 +1,32 @@
 ---
 title: "R Adoption and Research Software"
+page-layout: full
+format: 
+  html:
+    link-external-newwindow: true
+    css: styles.css
+embed-resources: true
 ---
 
+::: columns
+::: {.column width="70%"}
 Are you a department that is looking to adopt a license and cost-free solution to statistical analysis and data science outputs ?
 
 Do you have a skill and technological transformation in R, Version Control and good engineering practices ?
 
-R packages are the core of the R programming language. Many established packages or softwares already exist. It is absolutely valid to create tailored infrastructure out of existing ways of working, whether its for standardization and or efficiency gains. Version control is how simplify complex projects that bring the brightest minds to collaborate.
+R packages are the core of the R programming language. Many established packages or software already exist. It is absolutely valid to create tailored infrastructure out of existing ways of working, whether it's for standardization and or efficiency gains. Version control can simplify complex projects that bring the brightest minds to collaborate.
 
 Talk to us about the technical and expertise-needs to onboard to an R based journey. We listen and start with clients wherever they are coming from. Write to us at [contact\@finc-research.com](email:%20contact@finc-research.com) for an initial chat.
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="25%"}
+![](media/imgfile3.png)
+:::
+
+:::
+
+
+

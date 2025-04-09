@@ -12,9 +12,7 @@ website:
       - href: r_adopt.qmd
         text: Adopting R & Research Software
       - href: dscience.qmd
-        text: Data Science
-      - href: blog.qmd
-        text: Blog
+        text: Statistics - Data Science
     
     
 

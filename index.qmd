@@ -8,29 +8,30 @@ format:
 embed-resources: true
 ---
 
-Finc Research Company is a remote firm specialising in high quality research and software engineering, including Speech and Text ghostwriting.
+::: columns
+::: {.column width="70%"}
+Finc Research Company is a remote firm specialising in high quality research and software engineering.
 
 We consult in :
 
-- R language adoption 
-- Statistics and Data Science 
-- Research Software 
+-   Trial Design for life sciences research
+-   R language adoption
+-   Statistics and Data Science
+-   Research Software
 
 We perform :
 
-- Statistical and Data Science analyses
-- Build research softwares for your ecosystem
-- Speech and text ghost writing in English (European/Nordic, Americas, Asia and Australiasian context)
+-   Statistical support and analyses
+-   Build research softwares for your ecosystem
 
-Our services are sectors inclusive. Contact us [contact@finc-research.com](email: contact@finc-research.com)
+Our services are sectors inclusive. Contact us [contact\@finc-research.com](email:%20contact@finc-research.com)
+:::
 
-
-\
-\
-
+::: {.column width="25%"}
 ![](media/imgfile3.png)
-![](media/imgfile5.png)
-![](media/imgfile.png)
-![](media/imgfile6.png)
+:::
+
+:::
+
 
 
