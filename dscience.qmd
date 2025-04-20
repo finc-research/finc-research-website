@@ -10,7 +10,7 @@ embed-resources: true
 
 Statistical application spans across sectors. So does research software.
 
-At Finc Research, our philosophy is "The truth is on your side". Therefore, data mining would only be a good thing. Speak to our consultants and we will listen to to your industry problem, translate that into a Data Science/ Statistics framework, and bring it to the side of where you need to take your business.
+Speak to our consultants and we will listen to to your industry problem, translate that into a Data Science/ Statistics framework, and bring it to the side of where you need to take your business.
 
 Our knowledge and experiences are not restricted to :
 
@@ -20,4 +20,4 @@ Our knowledge and experiences are not restricted to :
 -   Machine Learning
 -   Evaluation of AI and Machine Learning tools
 
-Write to us at [contact\@finc-research.com](email:%20contact@finc-research.com) for an initial chat.
+Our services are sector inclusive. Write to us at [contact\@finc-research.com](email:%20contact@finc-research.com) for an initial chat.
