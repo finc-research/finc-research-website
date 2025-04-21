@@ -1,0 +1,28 @@
+---
+title: "About"
+page-layout: full
+format: 
+  html:
+    link-external-newwindow: true
+    css: styles.css
+embed-resources: true
+---
+<!-- markdownlint-disable -->
+
+<img src="media/Yeo_research_software.jpg" align = "right" alt="hex logo" style="display: inline-block; width:300px; margin: 0 auto auto auto; vertical-align:middle;margin:0px 50px" />
+
+<!-- markdownlint-enable -->
+
+Finc Research is owned by Audrey Yeo. She is a seasoned statistician and have worked in Finance, Insurance, Life Sciences, Pharma and Academia. She has a MSc Biostatistics from the University of Zurich, and a M Nursing from the University of Sydney. As a Biostatistician and Research Software Engineer at Roche in Basel, Switzerland, Audrey has managed many time-sensitive projects in phase I to phase III, including leading the development of an R package for a Bayesian Framework for early clinical trials called [`phase1b`](https://genentech.github.io/phase1b/main/articles/introduction.html). Audrey is also a licensed Registered Nurse and has worked in the biggests hospitals in the southern hemisphere including Royal Children's Hospital, St Vincent's and the Peter MacCallum Cancer Center. This means that she is critical on delivering time efficient projects and prioritize working from a place of clear research questions and goals. Professionally, Audrey is committed to open science practices that promote reproducibility and the pursuit of high quality research to support our clients’ competitive edge. She is also an active Statistician and R software developer in the life sciences and pharma community, being part of [`openstatsware`](openstatsware.org) and the R consortium’s HTA working group. She enjoys exacting life sciences and business questions into Statistics framework and partnering withe businesses to lead impactful products and the communities they make a difference in. 
+
+Connect here on [LinkedIn](linkedin.com/audreyyeoCH8000) and [GitHub](github.com/audreyyeoCH)
+
+Upcoming Talks :
+
+* [Pre-Conference Course with Daniel Sabanés Bové & Alessandro Gasparini - International Society of Clinical Biostatistics, Basel, CH - 2025](https://iscb2025.info/courses.html)
+
+Recent Talks :
+
+* [Bayesian Statistics Workshop, DAGStat, Berlin, D - 2025](www.finc-research.com/2024_PHUSE24_Gearing_Statisticians_Software_Success_files)
+* [Good Statistical Software Engineering in R Packages](www.finc-research.com/2024_PHUSE24_Gearing_Statisticians_Software_Success_files)
+* [Gearing Statisticians up for Software Success](www.finc-research.com/2024_PHUSE24_Gearing_Statisticians_Software_Success_files)

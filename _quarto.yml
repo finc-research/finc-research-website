@@ -13,6 +13,8 @@ website:
         text: Adopting R & Research Software
       - href: dscience.qmd
         text: Statistics - Data Science
+      - href: about.qmd
+        text: About Audrey
     
     
 

@@ -1,0 +1,165 @@
+// VARS
+
+@height: 100px;
+@width: 60px;
+@legocount: 5;
+@duration: 6s;
+
+// colors
+@color-background: #A1D6B2;
+@color-0: #E1BEE7;
+@color-1: #FCE4EC;
+@color-2: #BBE9FF;
+@color-3: #80CBC4;
+@color-4: #BA68C8;
+
+.defineColor(@var) {
+  @colorSet: 'color-@{var}';
+}
+
+// STYLES
+body {
+ background-color: @color-background;
+ overflow: hidden;
+}
+.container {  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: @height*2;
+  height: @height*3;
+  margin: -@height*1.75 0 0 -@height;
+  transform: rotateX(50deg) rotateZ(45deg);
+}
+.lego {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: @height;
+  width: @height;
+  animation: legoMoves @duration cubic-bezier(.54,.09,.86,.36) infinite;
+    
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;     
+  }
+  &:before {    
+    top: 100%;
+    left: 0;
+    height: @width;
+    width: @height;    
+    transform: skewX(45deg) translate(@width/2, 0);
+  } 
+  &:after {
+    height: @height;
+    width: @width;
+    top: 0;
+    right: 0;    
+    transform: skewY(45deg) translate(@width, -@width/2);
+  }
+  
+  .circles {
+    position: absolute;
+    left: 50%;
+    height: @height*0.3;
+    width: @height*0.3;
+    margin: -@height/4.5 0 0 -@height/4.5;
+    
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;      
+      border-radius: 50%;      
+    }
+    &:before {
+      left: -24.33px;
+    }
+    &:after {
+      right: -24.33px;
+    }
+  }
+  .circles-1 {
+    top: 25%;
+  }
+  .circles-2 {
+    top: 75%;
+  }
+}
+
+// LOOP
+.lego-loop (@i) when (@i >= 0) {
+  .defineColor(@i);
+  
+  .lego-@{i} {
+    background-color: @@colorSet;
+    animation-delay: @duration/@legocount*@i;
+
+    &:before {
+      background-color: darken(@@colorSet, 10%);
+    }
+    &:after {
+      background-color: darken(@@colorSet, 20%);
+    }
+    .circles {
+      &:before,
+      &:after {
+        background-color: @@colorSet;
+        box-shadow: 6px 6px 0px 1px darken(@@colorSet, 20%);
+      }
+    }
+  }
+  .lego-loop(@i - 1);
+}
+.lego-loop(@legocount - 1);
+
+// KEYFRAMES
+@keyframes legoMoves {
+
+  0%,
+  4.166%,
+  95.795%,
+  100%{
+    transform: translate(0, 0);
+    z-index: 10;
+  }
+  8.33% {
+    transform: translate(@height, 0);
+    z-index: 10;
+  }
+  23.3% {
+    transform: translate(@height, 0);
+    z-index: 40;
+  }
+  24.99% {
+    transform: translate(@height, @height);
+    z-index: 50;
+  }
+  41.66% {
+    transform: translate(@height, @height);
+    z-index: 60;
+  }
+  45.815%,
+  54.145%{
+    transform: translate(@height, @height*2);
+    z-index: 60;
+  }
+  58.31% {
+    transform: translate(0, @height*2);
+    z-index: 60;
+  }
+  72.9025% {
+    transform: translate(0, @height*2);
+    z-index: 30;
+  }
+  74.97% {
+    transform: translate(0, @height);
+    z-index: 20;
+  }
+  91.63% {
+    transform: translate(0, @height);
+    z-index: 10;
+  }
+}

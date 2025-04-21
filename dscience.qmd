@@ -1,5 +1,5 @@
 ---
-title: "Data Science"
+title: "Statistics - Data Science"
 page-layout: full
 format: 
   html:

@@ -1,0 +1,240 @@
+body {
+  background-color: #A1D6B2;
+  overflow: hidden;
+}
+.container {
+  position: absolute;
+  top: 80%;
+  left: 80%;
+  width: 200px;
+  height: 300px;
+  margin: -175px 0 0 -100px;
+  transform: rotateX(50deg) rotateZ(45deg);
+}
+.lego {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100px;
+  -webkit-animation: legoMoves 6s cubic-bezier(0.54, 0.09, 0.86, 0.36) infinite;
+          animation: legoMoves 6s cubic-bezier(0.54, 0.09, 0.86, 0.36) infinite;
+}
+.lego:before,
+.lego:after {
+  content: "";
+  position: absolute;
+}
+.lego:before {
+  top: 100%;
+  left: 0;
+  height: 60px;
+  width: 100px;
+  transform: skewX(45deg) translate(30px, 0);
+}
+.lego:after {
+  height: 100px;
+  width: 60px;
+  top: 0;
+  right: 0;
+  transform: skewY(45deg) translate(60px, -30px);
+}
+.lego .circles {
+  position: absolute;
+  left: 50%;
+  height: 30px;
+  width: 30px;
+  margin: -22.22222222px 0 0 -22.22222222px;
+}
+.lego .circles:before,
+.lego .circles:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.lego .circles:before {
+  left: -24.33px;
+}
+.lego .circles:after {
+  right: -24.33px;
+}
+.lego .circles-1 {
+  top: 25%;
+}
+.lego .circles-2 {
+  top: 75%;
+}
+.lego-4 {
+  background-color: #BA68C8;
+  -webkit-animation-delay: 4.8s;
+          animation-delay: 4.8s;
+}
+.lego-4:before {
+  background-color: #a844b9;
+}
+.lego-4:after {
+  background-color: #863694;
+}
+.lego-4 .circles:before,
+.lego-4 .circles:after {
+  background-color: #BA68C8;
+  box-shadow: 6px 6px 0px 1px #863694;
+}
+.lego-3 {
+  background-color: #80CBC4;
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s;
+}
+.lego-3:before {
+  background-color: #5cbcb3;
+}
+.lego-3:after {
+  background-color: #43a29a;
+}
+.lego-3 .circles:before,
+.lego-3 .circles:after {
+  background-color: #80CBC4;
+  box-shadow: 6px 6px 0px 1px #43a29a;
+}
+.lego-2 {
+  background-color: #C8E6C9;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+.lego-2:before {
+  background-color: #a5d6a7;
+}
+.lego-2:after {
+  background-color: #82c684;
+}
+.lego-2 .circles:before,
+.lego-2 .circles:after {
+  background-color: #C8E6C9;
+  box-shadow: 6px 6px 0px 1px #82c684;
+}
+.lego-1 {
+  background-color: #FCE4EC;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.lego-1:before {
+  background-color: #f7b6cc;
+}
+.lego-1:after {
+  background-color: #f288ab;
+}
+.lego-1 .circles:before,
+.lego-1 .circles:after {
+  background-color: #FCE4EC;
+  box-shadow: 6px 6px 0px 1px #f288ab;
+}
+.lego-0 {
+  background-color: #E1BEE7;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.lego-0:before {
+  background-color: #d099d9;
+}
+.lego-0:after {
+  background-color: #bf74cb;
+}
+.lego-0 .circles:before,
+.lego-0 .circles:after {
+  background-color: #E1BEE7;
+  box-shadow: 6px 6px 0px 1px #bf74cb;
+}
+@-webkit-keyframes legoMoves {
+  0%,
+  4.166%,
+  95.795%,
+  100% {
+    transform: translate(0, 0);
+    z-index: 10;
+  }
+  8.33% {
+    transform: translate(100px, 0);
+    z-index: 10;
+  }
+  23.3% {
+    transform: translate(100px, 0);
+    z-index: 40;
+  }
+  24.99% {
+    transform: translate(100px, 100px);
+    z-index: 50;
+  }
+  41.66% {
+    transform: translate(100px, 100px);
+    z-index: 60;
+  }
+  45.815%,
+  54.145% {
+    transform: translate(100px, 200px);
+    z-index: 60;
+  }
+  58.31% {
+    transform: translate(0, 200px);
+    z-index: 60;
+  }
+  72.9025% {
+    transform: translate(0, 200px);
+    z-index: 30;
+  }
+  74.97% {
+    transform: translate(0, 100px);
+    z-index: 20;
+  }
+  91.63% {
+    transform: translate(0, 100px);
+    z-index: 10;
+  }
+}
+@keyframes legoMoves {
+  0%,
+  4.166%,
+  95.795%,
+  100% {
+    transform: translate(0, 0);
+    z-index: 10;
+  }
+  8.33% {
+    transform: translate(100px, 0);
+    z-index: 10;
+  }
+  23.3% {
+    transform: translate(100px, 0);
+    z-index: 40;
+  }
+  24.99% {
+    transform: translate(100px, 100px);
+    z-index: 50;
+  }
+  41.66% {
+    transform: translate(100px, 100px);
+    z-index: 60;
+  }
+  45.815%,
+  54.145% {
+    transform: translate(100px, 200px);
+    z-index: 60;
+  }
+  58.31% {
+    transform: translate(0, 200px);
+    z-index: 60;
+  }
+  72.9025% {
+    transform: translate(0, 200px);
+    z-index: 30;
+  }
+  74.97% {
+    transform: translate(0, 100px);
+    z-index: 20;
+  }
+  91.63% {
+    transform: translate(0, 100px);
+    z-index: 10;
+  }
+}
