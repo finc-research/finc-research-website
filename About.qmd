@@ -21,7 +21,7 @@ Audrey is also a licensed Registered Nurse and has worked in the biggests hospit
 
 Professionally, Audrey is committed to open science practices that promote reproducibility and the pursuit of high quality research to support our clients’ competitive edge. She is also an active Statistician and R software developer in the life sciences and pharma community, being part of [`openstatsware`](openstatsware.org) and the R consortium’s HTA working group. She enjoys exacting life sciences and business questions into Statistics framework and partnering withe businesses to lead impactful products and the communities they make a difference in.
 
-Connect here on [LinkedIn](linkedin.com/audreyyeoCH8000) and [GitHub](github.com/audreyyeoCH)
+Connect here on [LinkedIn](www.linkedin.com/audreyyeoCH8000) and [GitHub](www.github.com/audreyyeoCH)
 
 Upcoming Talks :
 
@@ -31,6 +31,6 @@ with Daniel Sabanés Bové & Alessandro Gasparini - International Society of Cli
 
 Recent Talks :
 
--   [Practical Bayesian Statistics](www.finc-research.com/2025_DAGStat_Practical-Bayesian-Statistics.html) DAGStat, Berlin, DE - 2025
--   [Good Statistical Software Engineering for R Packages](www.finc-research.com/2024_PHUSE24_Gearing_Statisticians_Software_Success_files) DAGStat, Berlin, DE - 2025
--   [Gearing Statisticians up for Software Success](www.finc-research.com/2024_PHUSE24_Gearing_Statisticians_Software_Success_files) PHUSE, Basel, CH - 2025
+-   [Practical Bayesian Statistics](www.finc-research.com/2025_DAGStat_Practical-Bayesian-Statistics_DAGStat.html) DAGStat, Berlin, DE - 2025
+-   [Good Statistical Software Engineering for R Packages](www.finc-research.com/2025_DAGStat_GSWEP.html) DAGStat, Berlin, DE - 2025
+-   [Gearing Statisticians up for Software Success](www.finc-research.com/2024_PHUSE24_Gearing_Statisticians_Software_Success.html) PHUSE, Basel, CH - 2025
