@@ -31,6 +31,6 @@ with Daniel Sabanés Bové & Alessandro Gasparini - International Society of Cli
 
 Recent Talks :
 
--   [Practical Bayesian Statistics](2025_DAGStat_Practical-Bayesian-Statistics_DAGStat.html) DAGStat, Berlin, DE - 2025
+-   [Practical Bayesian Statistics](2025_DAGStat_Practical_Bayesian_Statistics_DAGStat.html) DAGStat, Berlin, DE - 2025
 -   [Good Statistical Software Engineering for R Packages](2025_DAGStat_GSWEP.html) DAGStat, Berlin, DE - 2025
 -   [Gearing Statisticians up for Software Success](2024_PHUSE24_Gearing_Statisticians_Software_Success.html) PHUSE, Basel, CH - 2025
