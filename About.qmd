@@ -23,6 +23,6 @@ Upcoming Talks :
 
 Recent Talks :
 
-* [Bayesian Statistics Workshop, DAGStat, Berlin, D - 2025](www.finc-research.com/2024_PHUSE24_Gearing_Statisticians_Software_Success_files)
+* [Practical Bayesian Statistics, DAGStat, Berlin, D - 2025](www.finc-research.com/2025_DAGStat_Practical-Bayesian-Statistics.html)
 * [Good Statistical Software Engineering in R Packages](www.finc-research.com/2024_PHUSE24_Gearing_Statisticians_Software_Success_files)
 * [Gearing Statisticians up for Software Success](www.finc-research.com/2024_PHUSE24_Gearing_Statisticians_Software_Success_files)
