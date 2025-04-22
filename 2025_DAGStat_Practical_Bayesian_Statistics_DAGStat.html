@@ -203,7 +203,7 @@
 <div class="cell-output cell-output-stdout">
 <pre><code>
 ── R CMD build ─────────────────────────────────────────────────────────────────
-* checking for file ‘/private/var/folders/36/1t9xtfl51px173qfsbg8tlcc0000gn/T/RtmpmD2qGX/remotes402f285d2fa7/Genentech-phase1b-617e6f9/DESCRIPTION’ ... OK
+* checking for file ‘/private/var/folders/36/1t9xtfl51px173qfsbg8tlcc0000gn/T/RtmpQWrj7e/remotes91b72c122d24/Genentech-phase1b-617e6f9/DESCRIPTION’ ... OK
 * preparing ‘phase1b’:
 * checking DESCRIPTION meta-information ... OK
 * checking for LF line-endings in source and make files and shell scripts
@@ -294,16 +294,12 @@ Berlin, Germany</p>
 <p><br>
 <br>
 </p>
-<div class="center">
-<p><img data-src="images/sydneyuni.jpeg" style="width:34.0%"> <!-- {fig-alt="Sunny day view of Quardrangle building of Sydney Uni"} --> <img data-src="images/rch.jpg" style="width:30.0%"> <img data-src="images/roche1.jpg" style="width:30.0%"> <!-- {fig-alt="Inside view of royal children's hospital from south side with the bug statue"} --></p>
-</div>
+<p><img data-src="images/sydneyuni.jpeg" style="width:34.0%"> <img data-src="images/rch.jpg" style="width:30.0%"> <img data-src="images/roche1.jpg" style="width:30.0%"></p>
 </section></section>
 <section id="intro-myself-1" class="title-slide slide level1 center">
 <h1>Intro myself</h1>
 <div class="center">
-<p><img data-src="images/hex3.png" style="width:20.0%"></p>
-<!-- {fig-alt="This hexagon is the R sticker for phase1b R package. It has a bright purple background, light orange border and the title is in fuschia. The graph in the middle is a CDF distribution in dots that changes from red dots to green dots to indicate a stop to go decision"} -->
-<p><img data-src="images/openstatsware-hex.svg" style="width:22.0%"> <!-- {fig-alt="This hexagon is the openstats logo"} --> <img data-src="images/finc3.png" style="width:19.0%"> <!-- {fig-alt="This hexagon is the finc-research company located in Basel, Switzerland. See more on finc.research.com"} --></p>
+<p><img data-src="images/hex3.png" style="width:20.0%"> <img data-src="images/openstatsware-hex.svg" style="width:22.0%"> <img data-src="images/finc3.png" style="width:19.0%"></p>
 </div>
 </section>
 
@@ -466,15 +462,14 @@ Berlin, Germany</p>
 <div class="column" style="width:40%;">
 <ol type="1">
 <li><p><a href="https://centerforhealthsecurity.org/sites/default/files/2022-12/201207-sensitivity-specificty-factsheet.pdf">SARS-CoV2 Diagnostic tests</a></p></li>
-<li><p><a href="https://doi.org/10.1093/aje/kwab093">Modeling transmission mechanism to infer treatment efficacy of different drugs and combination therapy against Trichuris trichiura</a> by Grolimund et al (2024)</p></li>
+<li><p><a href="https://doi.org/10.1093/aje/kwab093">Modeling transmission mechanism to infer treatment efficacy of different drugs and combination therapy against Trichuris trichiura</a> by <strong>Grolimund et al (2024)</strong></p></li>
 </ol>
 <p>As an example, we elaborate on 2.</p>
 <p>Modeling Egg Counts:</p>
 <p><span class="math display">\[Y_{i_{jgds}}^{(0)} \sim NB(\mu_{i_{jgd}}^{(0)}, k^{(0)})\]</span></p>
-<p>At baseline, egg counts are assumed to follow a negative binomial distribution.</p>
-<div class="column" style="width:15%;">
-
-</div></div><div class="column" style="width:45%;">
+<p>At baseline, egg counts are assumed to follow a negative binomial distribution. ::: {.column width=“15%”}</p>
+</div></div>
+<div class="column" style="width:45%;">
 <p>Mean <span class="math inline">\(\mu\)</span> egg count was modeled by the gamma distribution.</p>
 <p><span class="math display">\[ \mu \sim \ Gamma ( \mu_{jg}^{0}, \sigma_{jg}^{0}, \sigma_{jg}^{0} ) \]</span></p>
 <p>The parameters used for the gamma distribution were:</p>
@@ -483,7 +478,7 @@ Berlin, Germany</p>
 <li><p>For <span class="math inline">\(\sigma_{jg}^{(0)}\)</span> (standard deviation of egg count): an exponential distribution with a mean of 0.5 and a variance of 0.25.</p></li>
 <li><p>For <span class="math inline">\(\sigma_{jg}^{(0)}\)</span> a gamma distribution with mean 1 and variance 1</p></li>
 </ul>
-</div></div>
+</div><p>::::</p>
 </section>
 <section id="the-conjugate-prior" class="slide level2">
 <h2>The Conjugate Prior</h2>
@@ -736,7 +731,7 @@ Berlin, Germany</p>
 <div class="cell column-page-right quarto-layout-panel" data-layout-ncol="1" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<div id="fig-post" class="quarto-float quarto-figure quarto-figure-center" alt="This graphs side by side show that by increasing number of responders out of 23 reaches our TPP threshold" width="960" data-fig-align="center">
+<div id="fig-post" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center" alt="This graphs side by side show that by increasing number of responders out of 23 reaches our TPP threshold" width="960">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-post-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img data-src="2025_DAGStat_Practical_Bayesian_Statistics_DAGStat_files/figure-revealjs/fig-post-1.png" id="fig-post" class="quarto-figure quarto-figure-center" alt="This graphs side by side show that by increasing number of responders out of 23 reaches our TPP threshold" width="960">
@@ -1202,7 +1197,7 @@ Figure&nbsp;2: Predictive Posterior CDF for different Efficacy Rules
 <a href="email:%20audrey@finc-research.com">audrey@finc-research.com</a><br>
 M Nursing (Sydney)<br>
 M Sci Biostats (Zürich)</p>
-<p>&nbsp;&nbsp;&nbsp;<img data-src="images/QR_Bayes_questionnaire.png" style="width:30.0%">{fig-alt:“This }</p>
+<p>&nbsp;&nbsp;&nbsp;<img data-src="images/QR_Bayes_questionnaire.png" style="width:30.0%"></p>
 </div><div class="column" style="width:40%;">
 <p><img data-src="images/finc3.png" style="width:70.0%"></p>
 </div><div class="column" style="width:0%;">
@@ -1210,7 +1205,6 @@ M Sci Biostats (Zürich)</p>
 </div></div>
 </section>
 
-<section>
 <section id="etc" class="title-slide slide level1 center">
 <h1>etc</h1>
 <ul>
@@ -1219,7 +1213,6 @@ M Sci Biostats (Zürich)</p>
 <li><a href="www.linkedin.com/in/audrey-yeo-8000">LinkedIn</a></li>
 <li><a href="github.com/audreyyeoCH">My GitHub repo</a></li>
 </ul>
-</section>
 <div class="columns">
 <div class="column" style="width:30%;">
 
@@ -1227,25 +1220,8 @@ M Sci Biostats (Zürich)</p>
 
 </div><div class="column" style="width:50%;">
 
-</div><section id="appendix-updating-the-beta-distribution-or-modeling-the-posterior" class="slide level2 smaller">
-<h2>Appendix: Updating the Beta Distribution or modeling the Posterior</h2>
-<p><em>Current data we have</em></p>
-<p>x = number of responses n = sample size at time of evaluation</p>
-<p>Steps</p>
-<ol type="1">
-<li>To update alpha : alpha plus x</li>
-<li>To update beta : beta plus n and minus x</li>
-<li>Plot new graph with updated alpha and updated Beta</li>
-</ol>
-<p>What am I seeing</p>
-<ol type="1">
-<li>Notice the shape and bulk of curve</li>
-<li>Notice the variation</li>
-<li>Does the updated model make sense ?</li>
-</ol>
-
+</div></div>
 </section>
-</div></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
