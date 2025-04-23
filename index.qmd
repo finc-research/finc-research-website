@@ -14,15 +14,15 @@ Finc Research Company is a remote firm specialising in high quality research and
 
 We consult in :
 
--   Trial Design for life sciences research
+-   Trial Design for life sciences research and regulatory submissions
 -   R language adoption
 -   Statistics and Data Science
 -   Research Software
 
 We perform :
 
--   Statistical support and analyses
--   Build research softwares for your ecosystem
+-   Statistical support and analyses 
+-   Build research software for your ecosystem
 
 Our services are sector inclusive. Contact us [contact\@finc-research.com](email:%20contact@finc-research.com)
 :::
