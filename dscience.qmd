@@ -8,7 +8,9 @@ format:
 embed-resources: true
 ---
 
-Statistical application spans across sectors. So does research software.
+
+
+We listen to your industry problems, 
 
 Speak to our consultants and we will listen to to your industry problem, translate that into a Data Science/ Statistics framework, and bring it to the side of where you need to take your business.
 

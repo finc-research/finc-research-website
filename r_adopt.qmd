@@ -10,7 +10,10 @@ embed-resources: true
 
 ::: columns
 ::: {.column width="70%"}
-Are you a department that is looking to adopt a license and cost-free solution to statistical analysis and data science outputs ?
+
+Statistical application spans across sectors. So does research software.
+
+Are you a department that is looking to adopt a license and cost-free solution that is Gxp compliant for statistical analysis and data science outputs ?
 
 Do you have a skill and technological transformation in R, Version Control and good engineering practices ?
 
