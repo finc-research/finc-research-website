@@ -10,7 +10,7 @@ embed-resources: true
 
 ::: columns
 ::: {.column width="70%"}
-Finc Research Company is a remote firm specialising in high quality research and software engineering.
+Finc Research Company is a Boutique consulting firm specialising in high quality research and software engineering.
 
 We consult in :
 

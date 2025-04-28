@@ -8,11 +8,7 @@ format:
 embed-resources: true
 ---
 
-
-
-We listen to your industry problems, 
-
-Speak to our consultants and we will listen to to your industry problem, translate that into a Data Science/ Statistics framework, and bring it to the side of where you need to take your business.
+We listen to your industry problem and bring statistics or data science solutions  to where you need to take your business.
 
 Our knowledge and experiences are not restricted to :
 
