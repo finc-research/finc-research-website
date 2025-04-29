@@ -23,14 +23,5 @@ Professionally, Audrey is committed to open science practices that promote repro
 
 Connect here on [LinkedIn](www.linkedin.com/audreyyeoCH8000) and [GitHub](www.github.com/audreyyeoCH)
 
-Upcoming Talks :
-
--   [Pre-Conference Course : Good Software Engineering for R packages](https://iscb2025.info/courses.html)
-with Daniel Sabanés Bové & Alessandro Gasparini - International Society of Clinical Biostatistics, Basel, CH - 2025
--   Neuroscience Statistics Seminar, Novartis Headquarters, Basel, CH - 2025
-
-Recent Talks :
-
--   [Practical Bayesian Statistics](2025_DAGStat_Practical_Bayesian_Statistics_DAGStat.html) DAGStat, Berlin, DE - 2025
--   [Good Statistical Software Engineering for R Packages](2025_DAGStat_GSWEP.html) DAGStat, Berlin, DE - 2025
--   [Gearing Statisticians up for Software Success](2024_PHUSE24_Gearing_Statisticians_Software_Success.html) PHUSE, Basel, CH - 2025
+I actively share my knowledge through teaching, conference talks and poster presentation. 
+See more [here](http://www.finc-research.com/Talks.html)
