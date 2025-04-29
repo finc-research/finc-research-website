@@ -8,9 +8,8 @@ format:
 embed-resources: true
 ---
 
-::: columns
+:::::: columns
 ::: {.column width="70%"}
-
 Statistical application spans across sectors. So does research software.
 
 Are you looking for a cost-free solution that is GxP compliant for statistical analysis and data science outputs ?
@@ -26,10 +25,6 @@ Talk to us about the technical and expertise-needs to onboard to an R based jour
 :::
 
 ::: {.column width="25%"}
-![](media/imgfile3.png)
+![](media/finc_and_qr_transparent_final_hex-Photoroom.png)
 :::
-
-:::
-
-
-
+::::::
