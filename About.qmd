@@ -10,7 +10,7 @@ embed-resources: true
 
 <!-- markdownlint-disable -->
 
-<img src="media/Yeo_research_software.jpg" alt="hex logo" align="right" style="display: inline-block; width:300px; margin: 0 auto auto auto; vertical-align:middle;margin:0px 50px"/>
+<img src="media/yeo_salzburguseR.jpg" alt="salzburg mic" align="right" style="display: inline-block; width:300px; margin: 0 auto auto auto; vertical-align:middle;margin:0px 50px"/>
 
 <!-- markdownlint-enable -->
 
