@@ -1,5 +1,5 @@
 ---
-title: "Talks and Presentations"
+title: "Talks and Resources"
 page-layout: full
 format: 
   html:
@@ -24,3 +24,23 @@ Recent Talks :
 ::: {.column width="25%"}
 ![](media/finc_and_qr_transparent_final_hex-Photoroom.png)
 ::: 
+:::
+
+Appreciation post :
+
+::: columns
+::: {.column width="70%"}
+I appreciate the chats and presentations that I have with the community.
+
+If you feel the same and would like to buy me a coffee/book, you can do so here: [here](https://buymeacoffee.com/audreytyeoh) :
+:::
+
+::: {.column width="5%"}
+
+:::
+
+::: {.column width="25%"}
+![](media/bmc_qr.png){width=60%}
+:::
+:::
+
