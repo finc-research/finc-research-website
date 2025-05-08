@@ -1,5 +1,5 @@
 ---
-title: "Talks and Resources"
+title: "Resources"
 page-layout: full
 format: 
   html:
@@ -34,6 +34,8 @@ I appreciate the chats and presentations that I have with the community.
 
 If you feel the same and would like to buy me a coffee/book, you can do so 
 [here](https://buymeacoffee.com/audreytyeoh) :
+
+USD and other currencies accepted.
 :::
 
 ::: {.column width="5%"}
