@@ -14,12 +14,14 @@ Upcoming Talks :
 
 -   [Pre-Conference Course : Good Software Engineering for R packages](https://iscb2025.info/courses.html) with Daniel Sabanés Bové & Alessandro Gasparini - International Society of Clinical Biostatistics, Basel, CH - 2025
 -   Neuroscience Statistics Seminar, Novartis Headquarters, Basel, CH - 2025
+- Poster Presentation TBA, RoES, Graz, AT - 2025
+- Research Software Engineering Conf TBA, Warwick, UK - 2025
 
 Recent Talks :
 
 -   [Practical Bayesian Statistics](2025_DAGStat_Practical_Bayesian_Statistics_DAGStat.html) DAGStat, Berlin, DE - 2025
 -   [Good Statistical Software Engineering for R Packages](2025_DAGStat_GSWEP.html) DAGStat, Berlin, DE - 2025
--   [Gearing Statisticians up for Software Success](2024_PHUSE24_Gearing_Statisticians_Software_Success.html) PHUSE, Basel, CH - 2025
+-   [Gearing Statisticians up for Software Success](2024_PHUSE24_Gearing_Statisticians_Software_Success.html) PHUSE, Basel, CH - 2024
 ::: 
 ::: {.column width="25%"}
 ![](media/finc_and_qr_transparent_final_hex-Photoroom.png)

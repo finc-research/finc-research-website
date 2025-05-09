@@ -21,9 +21,9 @@ Audrey is also a licensed Registered Nurse and has worked in the biggest hospita
 
 Professionally, Audrey is committed to open science practices that promote reproducibility and the pursuit of high quality research to support our clients’ competitive edge. She is also an active Statistician and R software developer in the life sciences and pharma community, being part of [`openstatsware`](openstatsware.org) and the R consortium’s HTA working group. She enjoys exacting life sciences and business questions into Statistics framework. Furthermore, in her time in all these diverse industries, Audrey enjoys partnering with businesses that lead impactful products and the communities they make a difference in.
 
-Audrey actively share her knowledge through teaching, conference talks and poster presentation. 
-See more [here](http://www.finc-research.com/Talks.html)
+Audrey actively share her knowledge through teaching, conference talks and poster [presentations](http://www.finc-research.com/Talks.html). 
 
-Connect here on [LinkedIn](www.linkedin.com/audreyyeoCH8000) and [GitHub](www.github.com/audreyyeoCH)
+Connect here on 
 
-
+* [LinkedIn](www.linkedin.com/audrey-yeo-8000)
+* [GitHub](www.github.com/audreyyeoCH)

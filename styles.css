@@ -28,25 +28,22 @@
   }
 }
 
-/* Apply the gradient animation to the body */
 body {
   margin: 0;
   height: 100vh;
   font-family: Georgia, Sans-Serif;
   justify-content: center;
   align-items: center;
-  animation: gradientBackground 30s linear infinite;
+  display: flex; /* Good for centering potential content */
+  background: linear-gradient(45deg, #F9CEDC, #fad0c4, #fbc2eb, #ffd1ff, #CEE9F9, #E8EEC5, #F9CEDC); /* Include all your colors in the main gradient */
+  background-size: 400% 400%; /* Make it larger than the viewport */
+  animation: infiniteGradient 15s linear infinite; /* Adjust the duration as needed */
 }
 
-
-
-body {
-  margin: 0;
-  font-family: Georgia, Sans-Serif;
-  justify-content: center; /* Only effective if body is a flex container */
-  align-items: center;   /* Only effective if body is a flex container */
-  animation: gradientBackground 30s linear infinite;
-  min-height: 100vh; /* Optional: Ensure at least viewport height */
+/* Infinite gradient animation using background-position */
+@keyframes infiniteGradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
 html {

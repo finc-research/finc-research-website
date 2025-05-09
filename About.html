@@ -3825,22 +3825,21 @@ background: linear-gradient(25deg, #CEE9F9 0%, #fbc2eb 100%);
 background: linear-gradient(65deg, #E8EEC5 0%, #fad0c4 100%);
 }
 }
-
 body {
 margin: 0;
 height: 100vh;
 font-family: Georgia, Sans-Serif;
 justify-content: center;
 align-items: center;
-animation: gradientBackground 30s linear infinite;
+display: flex; 
+background: linear-gradient(45deg, #F9CEDC, #fad0c4, #fbc2eb, #ffd1ff, #CEE9F9, #E8EEC5, #F9CEDC); 
+background-size: 400% 400%; 
+animation: infiniteGradient 15s linear infinite; 
 }
-body {
-margin: 0;
-font-family: Georgia, Sans-Serif;
-justify-content: center; 
-align-items: center; 
-animation: gradientBackground 30s linear infinite;
-min-height: 100vh; 
+
+@keyframes infiniteGradient {
+0% { background-position: 0% 50%; }
+100% { background-position: 100% 50%; }
 }
 html {
 height: 100%; 
@@ -4041,8 +4040,12 @@ font-family: Arial;
 <p>Finc Research is owned by Audrey Yeo (she/her). Audrey is a seasoned statistician and have worked in Finance, Insurance, Life Sciences, Big Pharma and Academia. She has a MSc Biostatistics from the University of Zurich, and a M Nursing from the University of Sydney. As a Biostatistician and Research Software Engineer at Roche in Basel, Switzerland, Audrey has managed many time-sensitive projects in phase I to phase III, including leading the development of an R package for a Bayesian Framework for early clinical trials called <a href="https://genentech.github.io/phase1b/main/articles/introduction.html"><code>phase1b</code></a>.</p>
 <p>Audrey is also a licensed Registered Nurse and has worked in the biggest hospitals in the southern hemisphere including Royal Children’s Hospital, St Vincent’s and the Peter MacCallum Cancer Center. This means that she is critical on delivering time efficient projects and prioritize working from a place of clear research questions and goals.</p>
 <p>Professionally, Audrey is committed to open science practices that promote reproducibility and the pursuit of high quality research to support our clients’ competitive edge. She is also an active Statistician and R software developer in the life sciences and pharma community, being part of <a href="openstatsware.org"><code>openstatsware</code></a> and the R consortium’s HTA working group. She enjoys exacting life sciences and business questions into Statistics framework. Furthermore, in her time in all these diverse industries, Audrey enjoys partnering with businesses that lead impactful products and the communities they make a difference in.</p>
-<p>Audrey actively share her knowledge through teaching, conference talks and poster presentation. See more <a href="http://www.finc-research.com/Talks.html">here</a></p>
-<p>Connect here on <a href="www.linkedin.com/audreyyeoCH8000">LinkedIn</a> and <a href="www.github.com/audreyyeoCH">GitHub</a></p>
+<p>Audrey actively share her knowledge through teaching, conference talks and poster <a href="http://www.finc-research.com/Talks.html">presentations</a>.</p>
+<p>Connect here on</p>
+<ul>
+<li><a href="www.linkedin.com/audrey-yeo-8000">LinkedIn</a></li>
+<li><a href="www.github.com/audreyyeoCH">GitHub</a></li>
+</ul>
 
 
 
