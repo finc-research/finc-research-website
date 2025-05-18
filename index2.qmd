@@ -11,7 +11,6 @@ embed-resources: true
   <div class="text text-right" id="text-right"></div>
   <div class="text" id="combined">Finc</div>
   <div class="mini" id="after">Boutique Research Consulting Firm in Basel</div>
-  <div class="mini" id="after">Boutique Research Consulting Firm in Basel</div>
 </div>
 
 
