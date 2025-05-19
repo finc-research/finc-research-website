@@ -536,7 +536,7 @@ Audrey Yeo
 <div class="cell column-page-right quarto-layout-panel" data-layout-ncol="1" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<div id="fig-post" class="quarto-float quarto-figure quarto-figure-center" data-fig-pos="H" data-fig-align="center" alt="This graphs side by side show that by increasing number of responders out of 23 reaches our TPP threshold" width="960">
+<div id="fig-post" class="quarto-float quarto-figure quarto-figure-center" alt="This graphs side by side show that by increasing number of responders out of 23 reaches our TPP threshold" width="960" data-fig-align="center" data-fig-pos="H">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-post-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img data-src="2025_NeuroStatsNovartis_phase1b_files/figure-revealjs/fig-post-1.png" id="fig-post" class="quarto-figure quarto-figure-center" data-fig-pos="H" alt="This graphs side by side show that by increasing number of responders out of 23 reaches our TPP threshold" width="960">
@@ -956,44 +956,48 @@ Figure&nbsp;2: Predictive Posterior CDF for different Efficacy Rules
 <p>Efficacious if <span class="math display">\[ Pr( \Delta &gt; 15 \% | data ) &gt; 70\% \ otherwise \ Pr( \Delta &lt; 15 \% | data ) &gt; 70\% \]</span></p>
 
 <img data-src="2025_NeuroStatsNovartis_phase1b_files/figure-revealjs/unnamed-chunk-31-1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" width="960"></section>
-<section id="standard-of-care-distribution-when-unknown" class="slide level2">
-<h2>Standard of Care Distribution when unknown</h2>
-<p>Using the approach by Thall and Simon (Biometrics, 1994), this evaluates the posterior probability of achieving superior response rate in the treatment group <code>E</code> compared to standard of care <code>S</code>.</p>
-<ul>
-<li>The desired improvement is denoted as <code>delta</code>. There are two options in using <code>delta</code>. The absolute case when <code>relativeDelta = FALSE</code> and relative as when <code>relativeDelta = TRUE</code>.</li>
-</ul>
-</section>
-<section id="desired-improvement-delta-two-approaches" class="slide level2 smaller">
-<h2>Desired improvement <code>delta</code>, two approaches:</h2>
-<ol type="1">
-<li><p>The absolute case is when we define an absolute delta, greater than <code>P_S</code>, the response rate of the standard of care or control or <code>S</code> group such that the posterior is <code>Pr(P_E &gt; P_S + delta | data)</code>.</p></li>
-<li><p>In the relative case, we suppose that the treatment group’s response rate is assumed to be greater than <code>P_S + (1-P_S) * delta</code> such that the posterior is <code>Pr(P_E &gt; P_S + (1 - P_S) * delta | data)</code>.</p></li>
-</ol>
-</section>
-<section id="postprobdist" class="slide level2">
-<h2><code>postprobDist</code></h2>
-<ol type="1">
-<li><p><code>Pr(P_E &gt; P_S + delta | data)</code></p></li>
-<li><p><code>Pr(P_E &gt; P_S + (1 - P_S) * delta | data)</code> ✔️</p></li>
-</ol>
-<p>Control arm success rate 1 / 10 patients. How many patients in Treatment arm needed to respond for this two-arm trial to be a “GO” ?</p>
-
-<img data-src="2025_NeuroStatsNovartis_phase1b_files/figure-revealjs/unnamed-chunk-32-1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" width="960"><p>User facing functions with this feature include</p>
+<section id="standard-of-care-distribution-when-unknown-...dist-series" class="slide level2 smaller">
+<h2>Standard of Care Distribution when unknown, <code>...Dist</code> series:</h2>
+<p>Concerning:</p>
 <ul>
 <li><code>postprobDist()</code></li>
 <li><code>predprobDist</code></li>
 <li><code>ocPostprobDist()</code></li>
 <li><code>ocPredprobDist()</code></li>
 </ul>
+<p>Using the approach by Thall and Simon (Biometrics, 1994), this evaluates the posterior probability of achieving superior response rate in the treatment group <code>E</code> compared to standard of care <code>S</code>.</p>
+<ul>
+<li>The desired improvement is denoted as <code>delta</code>. There are two options in using <code>delta</code>. The absolute case when <code>relativeDelta = FALSE</code> and relative as when <code>relativeDelta = TRUE</code>.</li>
+</ul>
 </section>
-<section id="predictive-posterior-probability-for-decision-1" class="slide level2 smaller">
-<h2>Predictive posterior probability for Decision 1 :</h2>
-<p>The criteria for Decision 1 for Interim looks are :</p>
+<section id="standard-of-care-distribution-when-unknown-...dist-series-continued" class="slide level2 smaller">
+<h2>Standard of Care Distribution when unknown, <code>...Dist</code> series continued :</h2>
+<p>Desired improvement <code>delta</code>, two approaches:</p>
+<ol type="1">
+<li><p>The absolute case is when we define an absolute delta, greater than <code>P_S</code>, the response rate of the standard of care or control or <code>S</code> group such that the posterior is <code>Pr(P_E &gt; P_S + delta | data)</code>.</p></li>
+<li><p>In the relative case, we suppose that the treatment group’s response rate is assumed to be greater than <code>P_S + (1-P_S) * delta</code> such that the posterior is <code>Pr(P_E &gt; P_S + (1 - P_S) * delta | data)</code>.</p></li>
+</ol>
+<p>In summary:</p>
+<ol type="1">
+<li><p><code>relativeDelta = FALSE</code>: <code>Pr(P_E &gt; P_S + delta | data)</code></p></li>
+<li><p><code>relativeDelta = TRUE</code> : <code>Pr(P_E &gt; P_S + (1 - P_S) * delta | data)</code> ✔</p></li>
+</ol>
+</section>
+<section id="predictive-posterior-probability-1" class="slide level2 smaller">
+<h2>Predictive posterior probability</h2>
+<p>Concerning:</p>
+<ul>
+<li><code>predprobDist</code></li>
+<li><code>ocPredprobDist()</code></li>
+<li><code>ocRctPredprobDist()</code></li>
+</ul>
+<p>Predictive posterior probability for Decision 1: {.smaller}</p>
+<p>When <code>decision1 = TRUE</code>, criteria for Decision 1 for Interim looks are :</p>
 <ul>
 <li><p>interim GO : <code>P( success at final) &gt; phiU</code></p></li>
 <li><p>interim STOP : <code>P( success at final) &lt; phiL</code></p></li>
 </ul>
-<p>The criteria for Decision 1 for Final looks are:</p>
+<p>When <code>decision1 = TRUE</code>, criteria for Decision 1 for Final looks are:</p>
 <ul>
 <li><p>Final GO : <code>P( response rate &gt; p0 | data) &gt; tT</code></p></li>
 <li><p>Final STOP : <code>P( response rate &gt; p0 | data ) &lt; tT</code></p></li>
@@ -1001,15 +1005,35 @@ Figure&nbsp;2: Predictive Posterior CDF for different Efficacy Rules
 </section>
 <section id="predictive-posterior-probability-for-decision-2" class="slide level2 smaller">
 <h2>Predictive posterior probability for Decision 2:</h2>
-<p>The criteria for Decision 2 for Interim looks are :</p>
+<p>Still concerning:</p>
+<ul>
+<li><code>predprobDist</code></li>
+<li><code>ocPredprobDist()</code></li>
+<li><code>ocRctPredprobDist()</code></li>
+</ul>
+<p>When <code>decision1 = FALSE</code>, criteria for Decision 2 for Interim looks are :</p>
 <ul>
 <li><p>Interim GO : <code>P ( success at final) &gt; phiU</code></p></li>
 <li><p>Interim STOP : <code>P (failure at final ) &gt; phiFu</code></p></li>
 </ul>
-<p>The criteria for Decision 2 for Futility looks are :</p>
+<p>When <code>decision1 = FALSE</code>, criteria for Decision 2 for Futility looks are :</p>
 <ul>
-<li><p>Final GO : <code>P( response rate &gt; p0) &gt; tT</code></p></li>
-<li><p>Final STOP : <code>P( response rate  &lt; p1) &gt; tF</code></p></li>
+<li><p>Final GO : <code>P( response rate &gt; p0 | data) &gt; tT</code></p></li>
+<li><p>Final STOP : <code>P( response rate  &lt; p1 | data) &gt; tF</code></p></li>
+</ul>
+</section>
+<section id="posterior-probability-1" class="slide level2 smaller">
+<h2>Posterior probability</h2>
+<p>Concerning:</p>
+<ul>
+<li><code>postprobDist()</code></li>
+<li><code>ocPostprobDist()</code></li>
+<li><code>ocRctPostprobDist()</code></li>
+</ul>
+<p>At final, the criteria are:</p>
+<ul>
+<li><p>Final GO : <code>Pr( response rate &gt; p1 | data) &gt; tU</code></p></li>
+<li><p>Final STOP : <code>Pr( response rate &lt; p0 | data) &gt; tL</code></p></li>
 </ul>
 
 </section></section>
