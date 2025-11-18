@@ -10,7 +10,7 @@ embed-resources: true
 
 ::: columns
 ::: {.column width="70%"}
-Upcoming Talks :
+**Upcoming Talks** :
 
 -   [Pre-Conference Course : Good Software Engineering for R packages](https://openstatsware.github.io/shortcourse-iscb2025/) with Daniel Sabanés Bové & Alessandro Gasparini - International Society of Clinical Biostatistics, Basel, CH - 2025
 -   [NS&IBGH Scientific Knowledge Sharing Meeting](2025_NeuroStatsNovartis_phase1b.html), Novartis Headquarters, Basel, CH - 2025
