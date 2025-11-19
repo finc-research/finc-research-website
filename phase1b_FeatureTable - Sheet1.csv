@@ -1,0 +1,17 @@
+,SOC uncertainty,single-arm,two-arm,simulation,plotting,boundaries
+postprob,,1,,,,
+postprobDist,1,1,,,,
+predprob,,1,,,,
+predprobDist,1,1,,,,
+ocPostprob,,1,,1,,
+ocPostprobDist,1,1,,1,,
+ocPredprob,,1,,1,,
+ocPredprobDist,1,1,,1,,
+ocRctPostprobDist,1,1,1,1,,
+ocRctPredprobDist,1,1,1,1,,
+plotBeta,,,,1,1,
+plotDecision,,,,,1,
+plotOc,,,,,1,
+plotBounds,,,,,1,
+boundsPostprob,,,,,,1
+boundsPredprob,,,,,,1

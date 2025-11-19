@@ -68,5 +68,285 @@
     "title": "Research Software",
     "section": "",
     "text": "Coming soon."
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#introduction",
+    "href": "2025_Novartis_early_dev.html#introduction",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Introduction",
+    "text": "Introduction"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#introduction-1",
+    "href": "2025_Novartis_early_dev.html#introduction-1",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Introduction",
+    "text": "Introduction"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#objectives",
+    "href": "2025_Novartis_early_dev.html#objectives",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Objectives",
+    "text": "Objectives\n\n\n\nintroduce Beta Binomial model\nexplore postprob and predprob\nexplore simulation studies using ocPostprob\nquestion and answer"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#the-posterior-construction",
+    "href": "2025_Novartis_early_dev.html#the-posterior-construction",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "The Posterior Construction",
+    "text": "The Posterior Construction\nBeta Prior is a conjugate to the Posterior. Merriam-Webster Dictionary on “conjugate” : coupled, connected, or related.\n\\[ {P( B | A)} =  { {P(A|B)P(B)} \\over {P(A) } } \\]"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#prior-and-posterior-of-beta-distribution-for-response-rate",
+    "href": "2025_Novartis_early_dev.html#prior-and-posterior-of-beta-distribution-for-response-rate",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Prior and Posterior of Beta Distribution for response rate",
+    "text": "Prior and Posterior of Beta Distribution for response rate\n\nConjugate Prior is \\(f(\\pi)\\), where \\(\\pi \\sim {Beta(\\alpha, \\beta)}\\), same family of distribution of Posterior (see below)\nWe know the mean response rate (RR) is : \\[\\pi = \\ \\frac {\\alpha}{\\alpha + \\beta}\\]\nLikelihood is \\(f(x|\\pi)\\), where \\(x \\sim {Binomial(x, n)}\\)\nThe updated Posterior \\(f( \\pi | x )\\) is again a \\(Beta\\) distribution (same family as prior) : \\[ \\pi| \\ x \\sim Beta(\\alpha + x, \\ \\beta + n - x)\\] where \\(x\\) is the number of responders of current trials"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#detour-polack-et-al-2020-phase-iii-trial",
+    "href": "2025_Novartis_early_dev.html#detour-polack-et-al-2020-phase-iii-trial",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Detour : Polack et al (2020), Phase III trial",
+    "text": "Detour : Polack et al (2020), Phase III trial"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#beta-prior-and-mean-for-bnt162b2-phase-iii",
+    "href": "2025_Novartis_early_dev.html#beta-prior-and-mean-for-bnt162b2-phase-iii",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Beta Prior and Mean for BNT162b2 Phase III :",
+    "text": "Beta Prior and Mean for BNT162b2 Phase III :"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#posterior-and-mean-for-bnt162b2-phase-iii",
+    "href": "2025_Novartis_early_dev.html#posterior-and-mean-for-bnt162b2-phase-iii",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Posterior and Mean for BNT162b2 Phase III :",
+    "text": "Posterior and Mean for BNT162b2 Phase III :"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#history-and-how-to-install",
+    "href": "2025_Novartis_early_dev.html#history-and-how-to-install",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "History and how to install :",
+    "text": "History and how to install :\n\n2015 : Started as a need in Roche’s early development group, package development led by Daniel Sabanés Bové in 2015.   \n2023 : Refactoring, Renaming, adding Unit and Integration tests as current State-of-Art Software Engineering practice.\n2025 : CRAN submission is anticipated\n100% written in R and Open Source.\nwebsite : genentech.github.io/phase1b/\n\n\nlibrary(devtools)\ndevtools::install_github(\"https://github.com/Genentech/phase1b\")\nlibrary(phase1b)"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#use-case",
+    "href": "2025_Novartis_early_dev.html#use-case",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Use case:",
+    "text": "Use case:\n\n\n\nA single arm novel therapeutic with an assumed control response rate is at most 60%\n\n\nExample\nInterim\nFinal\n\n\n\n\nResponders\n16\n23\n\n\nn\n23\n40\n\n\nResponse rate\n69.57 %\n57.5 %\n\n\nPosterior probability*\nask phase1b\nask phase1b\n\n\nPredictive posterior probability*\nask phase1b\n-\n\n\nDecision to develop molecule further : Go/Stop/Grey Zone\nask phase1b\nask phase1b\n\n\n\n\n\n\n\n\n\n* Posterior Probability : \\(P (\\pi &gt; 60 \\% | \\alpha + x, \\beta + n - x )\\)\n* Predictive Posterior Probability : \\(P (success \\ or \\  failure \\ at \\ final)\\)"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#updating-the-posterior",
+    "href": "2025_Novartis_early_dev.html#updating-the-posterior",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Updating the Posterior",
+    "text": "Updating the Posterior\n\nUsing the formula for the mean, where \\(\\alpha = 0.6, \\beta = 0.4\\) and at interim x = 16, n = 23 : \\[ \\pi = \\ \\frac {\\alpha}{\\alpha + \\beta} = \\ \\frac {\\alpha_{updated} }{\\alpha_{updated} + \\beta_{updated}} = \\ \\frac {16.6 }{16.6 + 7.4} ≈ 69.17 \\% \\]\n\\[ mode (\\pi) = \\ \\frac {\\alpha_{updated} -1 }{\\alpha_{updated} + \\beta_{updated} - 2} = \\ \\frac {16.6 -1  }{16.6 + 7.4 - 2} ≈ 70.90 \\% \\]"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#a-variety-of-priors",
+    "href": "2025_Novartis_early_dev.html#a-variety-of-priors",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "A variety of Priors",
+    "text": "A variety of Priors\n\nTo illustrate how density of Prior changes with increased sample size even though mean is the same"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#a-variety-of-posteriors-with-different-data",
+    "href": "2025_Novartis_early_dev.html#a-variety-of-posteriors-with-different-data",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "A variety of Posteriors with “different” data",
+    "text": "A variety of Posteriors with “different” data\n\nData showed 16 of 23 responders (~69% response rate)"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#effect-of-weights-and-beta-mixtures",
+    "href": "2025_Novartis_early_dev.html#effect-of-weights-and-beta-mixtures",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Effect of weights (and beta Mixtures)",
+    "text": "Effect of weights (and beta Mixtures)"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#terminology",
+    "href": "2025_Novartis_early_dev.html#terminology",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Terminology",
+    "text": "Terminology\n\nA look = stop is when a rule is applied\nThe rule = criteria is specified for Go, Stop or Evaluate (Gray zone)\nIf the rule is met, the result is Go, Stop or Evaluate (Gray zone)\nGo = Success = Efficacious\nStop = Failure = Futile"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#postprob-example-lee-liu-2008",
+    "href": "2025_Novartis_early_dev.html#postprob-example-lee-liu-2008",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "postprob() example (Lee & Liu, 2008)",
+    "text": "postprob() example (Lee & Liu, 2008)\n\n\n\n\n\nExample\nInterim\n\n\n\n\nResponders\n16\n\n\nn\n23\n\n\nResponse rate\n69.57 %\n\n\nStandard of Care Response rate\n60 %\n\n\nPosterior probability\npostprob( ) call from phase1b\n\n\n\n\n\n\n\n\nphase1b::postprob(x = 16, n = 23, p = 0.60, par = c(0.6, 0.4))\n\n[1] 0.8359808"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#choice-of-weak-priors",
+    "href": "2025_Novartis_early_dev.html#choice-of-weak-priors",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Choice of Weak Priors",
+    "text": "Choice of Weak Priors\n\n\n\n\n\n\n\n\\(\\alpha\\) = 0.6 = number of responses\n\\(\\beta\\) = 0.4 = number of non-responses\n\\(\\alpha + \\beta\\) = 1 = sample size\n\\(\\mu = 60 \\%, CI = 0.66 \\% \\ and \\ 99.98 \\%\\)"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#choice-of-stronger-priors",
+    "href": "2025_Novartis_early_dev.html#choice-of-stronger-priors",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Choice of Stronger Priors",
+    "text": "Choice of Stronger Priors\n\n\n\n\n\n\n\\(\\alpha\\) = 6 = number of responses\n\\(\\beta\\) = 4 = number of non-responses\n\\(\\alpha + \\beta\\) = 10 = sample size\n\\(\\mu = 60 \\%, CI = 29.93 \\% \\ and \\ 86.30 \\%\\)"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#posterior-results-with-varying-priors",
+    "href": "2025_Novartis_early_dev.html#posterior-results-with-varying-priors",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Posterior results with varying Priors",
+    "text": "Posterior results with varying Priors\n\n\n\n\n\nExample\nInterim\n\n\n\n\nResponders\n16\n\n\nn\n23\n\n\nResponse rate\n69.57 %\n\n\nStandard of Care Response rate\n60 %\n\n\nPosterior probability\npostprob( ) call from phase1b\n\n\n\n\n\n\n\n\nweaker_prior &lt;- phase1b::postprob(x = 16, n = 23, p = 0.60, par = c(0.6, 0.4))\n\nstronger_prior &lt;- phase1b::postprob(x = 16, n = 23, p = 0.60, par = c(6, 4))\n\nprint(paste0(\"postprob of Weaker prior = \", round(weaker_prior, digits = 4), \" and postprob of Stronger prior = \", round(stronger_prior, digits = 4)))\n\n[1] \"postprob of Weaker prior = 0.836 and postprob of Stronger prior = 0.7954\""
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#posterior-probability",
+    "href": "2025_Novartis_early_dev.html#posterior-probability",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Posterior Probability",
+    "text": "Posterior Probability\n\nInterim trial is efficacious if posterior probability exceeds 70% or P( RR ≥ 60 % | data ) &gt; 70%\n\n\n\n\n\n\n\n\n\n\nFigure 1"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#beta-prior-mixture",
+    "href": "2025_Novartis_early_dev.html#beta-prior-mixture",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Beta Prior Mixture",
+    "text": "Beta Prior Mixture\n\\[  f(\\pi | x)  \\propto \\  \\pi^{x} (1-\\pi)^{n-x}\\sum_{j = 1}^{k} \\ w_j \\frac {1}{B(\\alpha_j, \\beta_j)} \\pi^{\\alpha_j-1}(1-\\pi)^{\\beta_j-1} \\]\n\nalpha1 &lt;- 0.06\nbeta1 &lt;- 0.04\nalpha2 &lt;- 1\nbeta2 &lt;- 1 # 50 : 50 weighting on priors\n\nphase1b::postprob(\n  x = 16,\n  n = 23,\n  p = 0.3,\n  par = rbind(\n    c(alpha1, beta1),\n    c(alpha2, beta2)\n  )\n)\n\n[1] 0.9999562"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#predprob-example-lee-liu-2008",
+    "href": "2025_Novartis_early_dev.html#predprob-example-lee-liu-2008",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "predprob() example (Lee & Liu, 2008)",
+    "text": "predprob() example (Lee & Liu, 2008)\n\n\n\n\n\nExample\nInterim\n\n\n\n\nResponders\n16\n\n\nn\n23\n\n\nResponse rate\n69.57 %\n\n\nStandard of Care Response rate\n60 %\n\n\nPredictive Posterior probability\npredprob( ) call from phase1b\n\n\n\n\n\n\n\n\ncontrol &lt;- 0.6\nconfidence_seventy &lt;- 0.7\nresult &lt;- phase1b::predprob(\n  x = 16, n = 23, Nmax = 40, p = control, thetaT = confidence_seventy,\n  parE = c(0.6, 0.4)\n)\nresult$result\n\n[1] 0.8211011\n\nconfidence_ninety &lt;- 0.9\nresult_high_thetaT &lt;- phase1b::predprob(\n  x = 16, n = 23, Nmax = 40, p = control, thetaT = confidence_ninety,\n  parE = c(0.6, 0.4)\n)\nresult_high_thetaT$result\n\n[1] 0.5655589"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#predictive-posterior-probability",
+    "href": "2025_Novartis_early_dev.html#predictive-posterior-probability",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Predictive Posterior Probability",
+    "text": "Predictive Posterior Probability\n\n\n\n\n\n\n\n\n\n\n\n(a) \\(P (\\pi &gt; 0.6 | \\ data )\\) &gt; 70%\n\n\n\n\n\n\n\n\n\n\n\n(b) \\(P (\\pi &gt; 0.6 | \\ data )\\) &gt; 90%\n\n\n\n\n\n\n\nFigure 2: Predictive Posterior CDF for different Efficacy Rules"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#operating-characteristics-threshold-for-success-and-failure",
+    "href": "2025_Novartis_early_dev.html#operating-characteristics-threshold-for-success-and-failure",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Operating Characteristics : threshold for Success (and failure):",
+    "text": "Operating Characteristics : threshold for Success (and failure):\n\nEfficacy criteria, e.g. we would stop for Efficacy if :\n\nPr( RR &gt; p1) &gt; tU\n\nFutility criteria, eg. we would stop for Futility if :\n\nPr( RR &lt; p0) &gt; tL"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#rules-and-operating-characteristics.-a-use-case-for-ocpostprob",
+    "href": "2025_Novartis_early_dev.html#rules-and-operating-characteristics.-a-use-case-for-ocpostprob",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Rules and Operating characteristics. A use case for ocPostprob():",
+    "text": "Rules and Operating characteristics. A use case for ocPostprob():\nAssuming real world (true) responder rate is 30 %.\n\nLook for Efficacy: Go if \\(P( \\pi &gt; 30\\% | \\ data ) &gt; 70 \\%\\)\nLook for Futility: Stop if \\(P( \\pi &lt; 20\\% | \\ data ) &gt; 70 \\%\\)\nPrior of treatment arm \\(Beta(0.6, 0.4)\\).\n\n\nset.seed(2025)\nres &lt;- phase1b::ocPostprob(\n  nnE = c(23, 40),\n  truep = 0.40,\n  p0 = 0.20,\n  p1 = 0.30, # Efficacy\n  tL = 0.70,\n  tU = 0.70,\n  parE = c(0.6, 0.4),\n  sim = 500,\n  wiggle = TRUE,\n  nnF = c(23, 40)\n)\nres$oc\n\n  ExpectedN PrStopEarly PrEarlyEff PrEarlyFut PrEfficacy PrFutility PrGrayZone\n1    28.598       0.684      0.676      0.008       0.84      0.008      0.152"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#plotting-results-from-ocpostprob",
+    "href": "2025_Novartis_early_dev.html#plotting-results-from-ocpostprob",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Plotting results from ocPostprob()",
+    "text": "Plotting results from ocPostprob()"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#expanded-features",
+    "href": "2025_Novartis_early_dev.html#expanded-features",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Expanded features",
+    "text": "Expanded features\n…. and wiggle room!\n\n\n\n\n\n\nSOC uncertainty\nsingle-arm\ntwo-arm\nsimulation\nplotting\nboundaries\n\n\n\n\npostprob\n\n✔️\n\n\n\n\n\n\npostprobDist\n✔️\n✔️\n\n\n\n\n\n\npredprob\n\n✔️\n\n\n\n\n\n\npredprobDist\n✔️\n✔️\n\n\n\n\n\n\nocPostprob\n\n✔️\n\n✔️\n\n\n\n\nocPostprobDist\n✔️\n✔️\n\n✔️\n\n\n\n\nocPredprob\n\n✔️\n\n✔️\n\n\n\n\nocPredprobDist\n✔️\n✔️\n\n✔️\n\n\n\n\nocRctPostprobDist\n✔️\n✔️\n✔️\n✔️\n\n\n\n\nocRctPredprobDist\n✔️\n✔️\n✔️\n✔️\n\n\n\n\nplotBeta\n\n\n\n✔️\n✔️\n\n\n\nplotDecision\n\n\n\n\n✔️\n\n\n\nplotOc\n\n\n\n\n✔️\n\n\n\nplotBounds\n\n\n\n\n✔️\n\n\n\nboundsPostprob\n\n\n\n\n\n✔️\n\n\nboundsPredprob\n\n\n\n\n\n✔️"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#concluding-remarks",
+    "href": "2025_Novartis_early_dev.html#concluding-remarks",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Concluding remarks",
+    "text": "Concluding remarks\n\n\n\n\nphase1b can be helpful to many therapeutic areas that use binary endpoint if beta priors are appropriate\nBig thank you to Daniel Sabanés Bové for mentorship. Past colleagues Isaac Gravestock, John Kirkpatrick, Craig Gower-Paige et al who collaborated and supported.\nIssue page \nLet’s connect    \nCode for this presentation \nSimilar presentation at ISCB46 & RoES Graz"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#license-info",
+    "href": "2025_Novartis_early_dev.html#license-info",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "License info",
+    "text": "License info\nPlease acknowledge authors and creators\n\n\nCreative Common License used \nFor phase1b see author list \nFor this presentation, Audrey Yeo"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#references",
+    "href": "2025_Novartis_early_dev.html#references",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "References",
+    "text": "References\n\nThall P F, Simon R (1994), Practical Guidelines for Phase IIB Clinical Trials, Biometrics, 50, 337-349\nLee J J, Liu D D (2008), A Predictive probability design for phase II cancer clinical trials, 5(2), 93-106, Clinical Trials\nYeo, A T, Sabanés Bové D, Elze M, Pourmohamad T, Zhu J, Lymp J, Teterina A (2024). Phase1b : Calculations for decisions on Phase 1b clinical trials. R package version 1.0.0, https://genentech.github.io/phase1b\nInclusive Speaker Orientation Linux Foundation"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#some-more-references",
+    "href": "2025_Novartis_early_dev.html#some-more-references",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Some more references",
+    "text": "Some more references\n\nZeileis, Fisher, Hornik, Ihaka, McWhite, Murrell, Stauffer, Wilke (2020). colorspace: A Toolbox for Manipulating and Assessing Colors and Palettes. Journal of Statistical Software.\nPollock et al (2020). Safety and Efficacy of the BNT162b2 mRNA Covid-19 Vaccine. The New England Journal of Medicine. Vol. 383. No. 27, doi: 10.1056/NEJMoa203457\nRoychoudhury, S (2022) A Bayesian Group-sequential Design for COVID-19 Vaccine Development, DIA BSWG F2F Meeting, Joint Statistician Meeting, Washington DC August 9th, 2022"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#safety-and-efficacy-of-the-bnt162b2-mrna-covid-19-vaccine",
+    "href": "2025_Novartis_early_dev.html#safety-and-efficacy-of-the-bnt162b2-mrna-covid-19-vaccine",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Safety and Efficacy of the BNT162b2 mRNA Covid-19 Vaccine",
+    "text": "Safety and Efficacy of the BNT162b2 mRNA Covid-19 Vaccine\n\n\n\\[ \\theta : \\frac{case \\ rate \\ in \\ Active}{case \\ rate \\ in \\ Placebo} = \\frac{1-VE}{2-VE} \\]\n\\[ VE = (1-2\\theta) * (1-\\theta) \\]\nwhere case rate = \\(\\theta\\) and vaccine efficacy = \\(VE\\)\n\n\n\\(Beta(0.700102, 1)\\) which corresponds:\n\\[ \\mu (\\theta = case \\ rate \\ ratio) = \\frac{0.700102}{1.700123} \\approx 0.411 \\]\n\\[ \\therefore H_{a} : p = Pr( \\theta ≤ 0.4117647 \\ | \\ data, prior) \\]\n\n\\[ H_{o} : p = Pr( VE ≤ 20 \\% \\ | \\ data, prior) \\]\n\\[ H_{a} : p = Pr(VE &gt; 30 \\% \\ | \\ data, prior) \\]\n\nEfficacy criteria :\n\\[ Interim \\ : p &gt; 99.50 \\% \\] \\[ Final \\ : p &gt; 99.50 \\% \\]"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#strength-of-priors-cdf-version",
+    "href": "2025_Novartis_early_dev.html#strength-of-priors-cdf-version",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Strength of Priors (CDF version)",
+    "text": "Strength of Priors (CDF version)"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#strength-of-priors-on-predictive-posteriors-cdf-version",
+    "href": "2025_Novartis_early_dev.html#strength-of-priors-on-predictive-posteriors-cdf-version",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Strength of Priors on Predictive Posteriors (CDF version)",
+    "text": "Strength of Priors on Predictive Posteriors (CDF version)"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#evaluating-the-difference-between-two-arms",
+    "href": "2025_Novartis_early_dev.html#evaluating-the-difference-between-two-arms",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Evaluating the difference between two arms ?",
+    "text": "Evaluating the difference between two arms ?\nMeaningful improvement if \\[ \\Delta &gt; 15\\% \\ when \\ \\Delta = \\pi_{E} - \\pi_{S}\\]\nEfficacious if \\[ Pr( \\Delta &gt; 15 \\% | data ) &gt; 70\\% \\ otherwise \\ Pr( \\Delta &lt; 15 \\% | data ) &gt; 70\\% \\]"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#standard-of-care-distribution-when-unknown-...dist-series",
+    "href": "2025_Novartis_early_dev.html#standard-of-care-distribution-when-unknown-...dist-series",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Standard of Care Distribution when unknown, ...Dist series:",
+    "text": "Standard of Care Distribution when unknown, ...Dist series:\nConcerning:\n\npostprobDist()\npredprobDist\nocPostprobDist()\nocPredprobDist()\n\nUsing the approach by Thall and Simon (Biometrics, 1994), this evaluates the posterior probability of achieving superior response rate in the treatment group E compared to standard of care S.\n\nThe desired improvement is denoted as delta. There are two options in using delta. The absolute case when relativeDelta = FALSE and relative as when relativeDelta = TRUE."
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#standard-of-care-distribution-when-unknown-...dist-series-continued",
+    "href": "2025_Novartis_early_dev.html#standard-of-care-distribution-when-unknown-...dist-series-continued",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Standard of Care Distribution when unknown, ...Dist series continued :",
+    "text": "Standard of Care Distribution when unknown, ...Dist series continued :\nDesired improvement delta, two approaches:\n\nThe absolute case is when we define an absolute delta, greater than P_S, the response rate of the standard of care or control or S group such that the posterior is Pr(P_E &gt; P_S + delta | data).\nIn the relative case, we suppose that the treatment group’s response rate is assumed to be greater than P_S + (1-P_S) * delta such that the posterior is Pr(P_E &gt; P_S + (1 - P_S) * delta | data).\n\nIn summary:\n\nrelativeDelta = FALSE: Pr(P_E &gt; P_S + delta | data)\nrelativeDelta = TRUE : Pr(P_E &gt; P_S + (1 - P_S) * delta | data)"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#predictive-posterior-probability-for-decision-1",
+    "href": "2025_Novartis_early_dev.html#predictive-posterior-probability-for-decision-1",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Predictive posterior probability for Decision 1",
+    "text": "Predictive posterior probability for Decision 1\nConcerning:\n\npredprobDist\nocPredprobDist()\nocRctPredprobDist()\n\nPredictive posterior probability for Decision 1:\nWhen decision1 = TRUE, criteria for Decision 1 for Interim looks are :\n\nInterim GO : P( success at final) &gt; phiU\nInterim STOP : P( success at final) &lt; phiL\n\nWhen decision1 = TRUE, criteria for Decision 1 for Final looks are:\n\nFinal GO : P( response rate &gt; p0 | data) &gt; tT\nFinal STOP : P( response rate &gt; p0 | data ) &lt; tT"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#predictive-posterior-probability-for-decision-2",
+    "href": "2025_Novartis_early_dev.html#predictive-posterior-probability-for-decision-2",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Predictive posterior probability for Decision 2",
+    "text": "Predictive posterior probability for Decision 2\nStill concerning:\n\npredprobDist\nocPredprobDist()\nocRctPredprobDist()\n\nWhen decision1 = FALSE, criteria for Decision 2 for Interim looks are :\n\nInterim GO : P ( success at final) &gt; phiU\nInterim STOP : P (failure at final ) &gt; phiFu\n\nWhen decision1 = FALSE, criteria for Decision 2 for Final looks are :\n\nFinal GO : P( response rate &gt; p0 | data) &gt; tT\nFinal STOP : P( response rate  &lt; p1 | data) &gt; tF"
+  },
+  {
+    "objectID": "2025_Novartis_early_dev.html#posterior-probability-1",
+    "href": "2025_Novartis_early_dev.html#posterior-probability-1",
+    "title": "A Bayesian approach to decision making in early development clinical trials: phase1b R package",
+    "section": "Posterior probability",
+    "text": "Posterior probability\nConcerning:\n\npostprobDist()\nocPostprobDist()\nocRctPostprobDist()\n\nAt final, the criteria are:\n\nFinal GO : Pr( response rate &gt; p1 | data) &gt; tU\nFinal STOP : Pr( response rate &lt; p0 | data) &gt; tL"
   }
 ]
