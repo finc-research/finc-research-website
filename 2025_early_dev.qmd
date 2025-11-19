@@ -71,9 +71,7 @@ df_thetaThigh$cumul_x <- df_thetaThigh$counts + 16
 
 ::: center
 ![](images/sydneyuni.jpeg){width="34%"}
-<!-- {fig-alt="Sunny day view of Quardrangle building of Sydney Uni"} -->
 ![](images/rch.jpg){width="30%"} ![](images/roche1.jpg){width="30%"}
-<!-- {fig-alt="Inside view of royal children's hospital from south side with the bug statue"} -->
 :::
 
 ## Introduction
