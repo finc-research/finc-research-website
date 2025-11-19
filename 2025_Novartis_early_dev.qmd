@@ -1,6 +1,6 @@
 ---
 title: "A Bayesian approach to decision making in early development clinical trials: phase1b R package"
-subtitle: "AQS Interview, Early Development Immunology"
+subtitle: "Early Development Immunology"
 author: "Audrey Yeo"
 institute: "Novartis, Basel, CH"
 format: 
