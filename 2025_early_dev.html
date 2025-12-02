@@ -9,8 +9,8 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-da03d714c310c60cec1d83284c92da2c.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.17">
 
-  <meta name="author" content="Audrey Yeo">
-  <title>A Bayesian approach to decision making in early development clinical trials: phase1b R package</title>
+  <meta name="author" content="">
+  <title>early_dev</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -94,7 +94,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-00ac2f6af1389919a18f42df5b7c0002.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-f8971e3b38c26f6195601d7768b1da1e.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -195,20 +195,11 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">A Bayesian approach to decision making in early development clinical trials: phase1b R package</h1>
 
-<div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Audrey Yeo 
-</div>
-        <p class="quarto-title-affiliation">
-            Novartis, Basel, CH
-          </p>
-    </div>
-</div>
-
+<section>
+<section id="a-bayesian-approach-to-decision-making-in-early-development-oncology-clinical-trials" class="title-slide slide level1 center" data-background-gradient="linear-gradient(to top, #F8FAB4, #A7AAE1)">
+<h1>A Bayesian approach to decision making in early development Oncology clinical trials</h1>
+<p>Audrey Yeo, Basel - CH</p>
 </section>
 <section id="introduction" class="slide level2">
 <h2>Introduction</h2>
@@ -232,10 +223,10 @@ Audrey Yeo
 </div><div class="column" style="width:40%;">
 <p><img data-src="images/openstatsware-hex.svg" style="width:80.0%"></p>
 </div></div>
-</section>
+</section></section>
 <section>
-<section id="early-development-trials-and-why-phase1b" class="title-slide slide level1 center">
-<h1>Early development trials and why <code>phase1b</code>?</h1>
+<section id="early-oncology-trials-and-why-phase1b" class="title-slide slide level1 center">
+<h1>Early oncology trials and why <code>phase1b</code>?</h1>
 
 </section>
 <section id="objectives" class="slide level2">
@@ -243,10 +234,11 @@ Audrey Yeo
 <div class="columns">
 <div class="column" style="width:40%;">
 <ul>
-<li>introduce Beta Binomial model</li>
-<li>explore <code>postprob</code> and <code>predprob</code></li>
-<li>explore simulation studies using <code>ocPostprob</code></li>
-<li>question and answer</li>
+<li>Introduce Beta Binomial model</li>
+<li>Explore <code>postprob</code> and <code>predprob</code></li>
+<li>Explore simulation studies using <code>ocPostprob</code></li>
+<li>Operating characteristics</li>
+<li>Question and answer</li>
 </ul>
 </div><div class="column" style="width:10%;">
 
@@ -270,26 +262,12 @@ Audrey Yeo
 <li><p>The updated Posterior <span class="math inline">\(f( \pi | x )\)</span> is again a <span class="math inline">\(Beta\)</span> distribution (same family as prior) : <span class="math display">\[ \pi| \ x \sim Beta(\alpha + x, \ \beta + n - x)\]</span> where <span class="math inline">\(x\)</span> is the number of responders of current trials</p></li>
 </ul>
 </section>
-<section id="detour-polack-et-al-2020-phase-iii-trial" class="slide level2">
-<h2>Detour : <a href="10.1056/NEJMoa2034577">Polack et al (2020)</a>, Phase III trial</h2>
-
-<!-- case rate ratio = case rate in vaxxed group / case rate in placebo group -->
-<!-- The case rate ratio, also known as the incidence rate ratio (IRR), is a measure used to calculate vaccine efficacy (VE). The formula is VE = 1 - IRR, where IRR is the ratio of the case rate in the vaccinated group to the case rate in the unvaccinated group. Case rates are calculated as the number of cases per person-time (e.g., person-years), and the formula for the IRR is: \(IRR=\frac{\frac{cases_{v}}{time_{v}}}{\frac{cases_{p}}{time_{p}}}\) \(cases_{v}\) = number of cases in the vaccinated group\(time_{v}\) = total person-time in the vaccinated group\(cases_{p}\) = number of cases in the placebo (unvaccinated) group\(time_{p}\) = total person-time in the placebo group -->
-<img data-src="images/pollock2020_table2.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" width="654"></section>
-<section id="beta-prior-and-mean-for-bnt162b2-phase-iii" class="slide level2">
-<h2>Beta Prior and Mean for BNT162b2 Phase III :</h2>
-
-<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" width="960"></section>
-<section id="posterior-and-mean-for-bnt162b2-phase-iii" class="slide level2">
-<h2>Posterior and Mean for BNT162b2 Phase III :</h2>
-
-<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" width="960"></section>
 <section id="history-and-how-to-install" class="slide level2 smaller">
 <h2>History and how to install :</h2>
 <ul>
 <li><p>2015 : Started as a need in Roche’s early development group, package development led by Daniel Sabanés Bové in 2015. <a href="https://www.linkedin.com/in/danielsabanesbove/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a> <a href="https://github.com/danielinteractive"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="https://rconis.com"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"></path></svg></a></p></li>
 <li><p>2023 : Refactoring, Renaming, adding Unit and Integration tests as current State-of-Art Software Engineering practice.</p></li>
-<li><p>2025 : CRAN submission is anticipated</p></li>
+<li><p>2026 : CRAN submission is anticipated</p></li>
 <li><p>100% written in R and Open Source.</p></li>
 <li><p>website : <a href="genentech.github.io/phase1b/">genentech.github.io/phase1b/</a></p></li>
 </ul>
@@ -325,7 +303,7 @@ Audrey Yeo
 </tr>
 <tr class="odd">
 <td style="text-align: center;">Response rate</td>
-<td style="text-align: center;">69.57 %</td>
+<td style="text-align: center;">69.6 %</td>
 <td style="text-align: center;">57.5 %</td>
 </tr>
 <tr class="even">
@@ -356,36 +334,44 @@ Audrey Yeo
 </section>
 <section id="updating-the-posterior" class="slide level2 smaller">
 <h2>Updating the Posterior</h2>
+<p><br>
+<br>
+</p>
+<div class="center">
 <ul>
-<li><p>Using the formula for the mean, where <span class="math inline">\(\alpha = 0.6, \beta = 0.4\)</span> and at interim x = 16, n = 23 : <span class="math display">\[ \pi = \ \frac {\alpha}{\alpha + \beta} = \ \frac {\alpha_{updated} }{\alpha_{updated} + \beta_{updated}} = \ \frac {16.6 }{16.6 + 7.4} ≈ 69.17 \% \]</span></p>
+<li><p>Using the formula for the mean, where <span class="math display">\[\alpha = 0.6, \beta = 0.4\]</span> and at interim x = 16, n = 23 : <span class="math display">\[ \pi = \ \frac {\alpha}{\alpha + \beta} = \ \frac {\alpha_{updated} }{\alpha_{updated} + \beta_{updated}} = \ \frac {16.6 }{16.6 + 7.4} ≈ 69.17 \% \]</span></p>
 <p><span class="math display">\[ mode (\pi) = \ \frac {\alpha_{updated} -1 }{\alpha_{updated} + \beta_{updated} - 2} = \ \frac {16.6 -1  }{16.6 + 7.4 - 2} ≈ 70.90 \% \]</span></p></li>
 </ul>
+</div>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
 
-<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-11-1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" alt="This plot shows how the prior can be updated from data and compares with the uniform beta prior." width="960"></section>
+<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" alt="This plot shows how the prior can be updated from data and compares with the uniform beta prior." width="960"></section>
 <section id="a-variety-of-priors" class="slide level2 smaller">
 <h2>A variety of Priors</h2>
 <ul>
 <li>To illustrate how density of Prior changes with increased sample size even though mean is the same</li>
 </ul>
 
-<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%" data-fig-pos="H" alt="This plot shows how the priors of mean 50% can have improving precision with increased sample size."></section>
-<section id="a-variety-of-posteriors-with-different-data" class="slide level2 smaller">
-<h2>A variety of Posteriors with “different” data</h2>
+<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%" data-fig-pos="H" alt="This plot shows how the priors of mean 50% can have improving precision with increased sample size."></section>
+<section id="a-variety-of-posteriors-with-varying-priors" class="slide level2 smaller">
+<h2>A variety of Posteriors with varying priors</h2>
 <ul>
 <li>Data showed 16 of 23 responders (~69% response rate)</li>
 </ul>
 
-<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-13-1.png" style="width:70.0%" data-fig-pos="H" alt="This plot shows how the priors of mean 50% can have improving precision with increased sample size." class="r-stretch"></section>
+<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%" data-fig-pos="H" alt="This plot shows how the priors of mean 50% can have improving precision with increased sample size."></section>
 <section id="effect-of-weights-and-beta-mixtures" class="slide level2">
 <h2>Effect of weights (and beta Mixtures)</h2>
 
-<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-14-1.png" data-fig-pos="H" width="960" class="r-stretch"></section>
+<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-10-1.png" data-fig-pos="H" width="960" class="r-stretch"></section>
 <section id="terminology" class="slide level2 smaller">
 <h2>Terminology</h2>
 <ul>
 <li>A look = stop is when a rule is applied</li>
-<li>The rule = criteria is specified for Go, Stop or Evaluate (Gray zone)</li>
-<li>If the rule is met, the result is Go, Stop or Evaluate (Gray zone)</li>
+<li>The rule = criteria is specified for Go, Stop or Evaluate (Grey zone)</li>
+<li>If the rule is met, the result is Go, Stop or Evaluate (Grey zone)</li>
 <li>Go = Success = Efficacious</li>
 <li>Stop = Failure = Futile</li>
 </ul>
@@ -447,14 +433,15 @@ Audrey Yeo
 <li><span class="math inline">\(\alpha\)</span> = 0.6 = number of responses</li>
 <li><span class="math inline">\(\beta\)</span> = 0.4 = number of non-responses</li>
 <li><span class="math inline">\(\alpha + \beta\)</span> = 1 = sample size</li>
-<li><span class="math inline">\(\mu = 60 \%, CI = 0.66 \% \ and \ 99.98 \%\)</span></li>
+<li><span class="math inline">\(\mu = 60 \%\)</span></li>
+<li><span class="math inline">\(CI = ( 0.66 \%, 99.98 \% )\)</span></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-17-1.png" data-fig-pos="H" width="960"></p>
+<p><img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-13-1.png" data-fig-pos="H" width="960"></p>
 </figure>
 </div>
 </div>
@@ -464,7 +451,8 @@ Audrey Yeo
 <section id="choice-of-stronger-priors" class="slide level2 smaller">
 <h2>Choice of Stronger Priors</h2>
 <p><br>
-<br>
+</p>
+<p><br>
 </p>
 <div class="columns">
 <div class="column" style="width:40;">
@@ -472,14 +460,15 @@ Audrey Yeo
 <li><span class="math inline">\(\alpha\)</span> = 6 = number of responses</li>
 <li><span class="math inline">\(\beta\)</span> = 4 = number of non-responses</li>
 <li><span class="math inline">\(\alpha + \beta\)</span> = 10 = sample size</li>
-<li><span class="math inline">\(\mu = 60 \%, CI = 29.93 \% \ and \ 86.30 \%\)</span></li>
+<li><span class="math inline">\(\mu = 60 \%\)</span></li>
+<li><span class="math inline">\(CI = ( 29.93 \% , 86.30 \% )\)</span></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-18-1.png" data-fig-pos="H" width="960"></p>
+<p><img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-14-1.png" data-fig-pos="H" width="960"></p>
 </figure>
 </div>
 </div>
@@ -527,13 +516,10 @@ Audrey Yeo
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>weaker_prior <span class="ot">&lt;-</span> phase1b<span class="sc">::</span><span class="fu">postprob</span>(<span class="at">x =</span> <span class="dv">16</span>, <span class="at">n =</span> <span class="dv">23</span>, <span class="at">p =</span> <span class="fl">0.60</span>, <span class="at">par =</span> <span class="fu">c</span>(<span class="fl">0.6</span>, <span class="fl">0.4</span>))</span>
 <span id="cb4-2"><a></a></span>
-<span id="cb4-3"><a></a>stronger_prior <span class="ot">&lt;-</span> phase1b<span class="sc">::</span><span class="fu">postprob</span>(<span class="at">x =</span> <span class="dv">16</span>, <span class="at">n =</span> <span class="dv">23</span>, <span class="at">p =</span> <span class="fl">0.60</span>, <span class="at">par =</span> <span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
-<span id="cb4-4"><a></a></span>
-<span id="cb4-5"><a></a><span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">"postprob of Weaker prior = "</span>, <span class="fu">round</span>(weaker_prior, <span class="at">digits =</span> <span class="dv">4</span>), <span class="st">" and postprob of Stronger prior = "</span>, <span class="fu">round</span>(stronger_prior, <span class="at">digits =</span> <span class="dv">4</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "postprob of Weaker prior = 0.836 and postprob of Stronger prior = 0.7954"</code></pre>
+<span id="cb4-3"><a></a>stronger_prior <span class="ot">&lt;-</span> phase1b<span class="sc">::</span><span class="fu">postprob</span>(<span class="at">x =</span> <span class="dv">16</span>, <span class="at">n =</span> <span class="dv">23</span>, <span class="at">p =</span> <span class="fl">0.60</span>, <span class="at">par =</span> <span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
+<!-- print(paste0("postprob of Weaker prior = ", round(weaker_prior, digits = 3), " and postprob of Stronger prior = ", round(stronger_prior, digits = 3))) -->
+<p>Posterior probability of Weaker prior is 83.6% and of Stronger prior is 79.54%.</p>
 </section>
 <section id="posterior-probability" class="slide level2 smaller">
 <h2>Posterior Probability</h2>
@@ -543,7 +529,7 @@ Audrey Yeo
 <div class="cell column-page-right quarto-layout-panel" data-layout-align="center" data-layout-ncol="1">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<div id="fig-post" class="quarto-float quarto-figure quarto-figure-center" width="960" data-fig-pos="H" alt="This graphs side by side show that by increasing number of responders out of 23 reaches our TPP threshold" data-fig-align="center">
+<div id="fig-post" class="quarto-float quarto-figure quarto-figure-center" data-fig-pos="H" alt="This graphs side by side show that by increasing number of responders out of 23 reaches our TPP threshold" data-fig-align="center" width="960">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-post-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img data-src="2025_early_dev_files/figure-revealjs/fig-post-1.png" id="fig-post" class="quarto-figure quarto-figure-center" data-fig-pos="H" alt="This graphs side by side show that by increasing number of responders out of 23 reaches our TPP threshold" width="960">
@@ -557,24 +543,46 @@ Figure&nbsp;1
 </div>
 </div>
 </section>
+<section id="posterior-probability-continued" class="slide level2 smaller">
+<h2>Posterior Probability (continued)</h2>
+<ul>
+<li>Interim trial is efficacious if posterior probability exceeds 70% or P( RR ≥ 60 % | data ) &gt; 70%</li>
+</ul>
+<div class="cell column-page-right quarto-layout-panel" data-layout-ncol="1">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-postcont" class="quarto-float quarto-figure quarto-figure-center" data-fig-pos="H" alt="This graphs side by side show that by increasing number of responders out of 23 reaches our TPP threshold" width="960">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-postcont-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="2025_early_dev_files/figure-revealjs/fig-postcont-1.png" id="fig-postcont" data-fig-pos="H" alt="This graphs side by side show that by increasing number of responders out of 23 reaches our TPP threshold" width="960">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-postcont-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
 <section id="beta-prior-mixture" class="slide level2 smaller">
 <h2>Beta Prior Mixture</h2>
 <p><span class="math display">\[  f(\pi | x)  \propto \  \pi^{x} (1-\pi)^{n-x}\sum_{j = 1}^{k} \ w_j \frac {1}{B(\alpha_j, \beta_j)} \pi^{\alpha_j-1}(1-\pi)^{\beta_j-1} \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>alpha1 <span class="ot">&lt;-</span> <span class="fl">0.06</span></span>
-<span id="cb6-2"><a></a>beta1 <span class="ot">&lt;-</span> <span class="fl">0.04</span></span>
-<span id="cb6-3"><a></a>alpha2 <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb6-4"><a></a>beta2 <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="co"># 50 : 50 weighting on priors</span></span>
-<span id="cb6-5"><a></a></span>
-<span id="cb6-6"><a></a>phase1b<span class="sc">::</span><span class="fu">postprob</span>(</span>
-<span id="cb6-7"><a></a>  <span class="at">x =</span> <span class="dv">16</span>,</span>
-<span id="cb6-8"><a></a>  <span class="at">n =</span> <span class="dv">23</span>,</span>
-<span id="cb6-9"><a></a>  <span class="at">p =</span> <span class="fl">0.3</span>,</span>
-<span id="cb6-10"><a></a>  <span class="at">par =</span> <span class="fu">rbind</span>(</span>
-<span id="cb6-11"><a></a>    <span class="fu">c</span>(alpha1, beta1),</span>
-<span id="cb6-12"><a></a>    <span class="fu">c</span>(alpha2, beta2)</span>
-<span id="cb6-13"><a></a>  )</span>
-<span id="cb6-14"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>alpha1 <span class="ot">&lt;-</span> <span class="fl">0.06</span></span>
+<span id="cb5-2"><a></a>beta1 <span class="ot">&lt;-</span> <span class="fl">0.04</span></span>
+<span id="cb5-3"><a></a>alpha2 <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb5-4"><a></a>beta2 <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="co"># 50 : 50 weighting on priors</span></span>
+<span id="cb5-5"><a></a></span>
+<span id="cb5-6"><a></a>phase1b<span class="sc">::</span><span class="fu">postprob</span>(</span>
+<span id="cb5-7"><a></a>  <span class="at">x =</span> <span class="dv">16</span>,</span>
+<span id="cb5-8"><a></a>  <span class="at">n =</span> <span class="dv">23</span>,</span>
+<span id="cb5-9"><a></a>  <span class="at">p =</span> <span class="fl">0.3</span>,</span>
+<span id="cb5-10"><a></a>  <span class="at">par =</span> <span class="fu">rbind</span>(</span>
+<span id="cb5-11"><a></a>    <span class="fu">c</span>(alpha1, beta1),</span>
+<span id="cb5-12"><a></a>    <span class="fu">c</span>(alpha2, beta2)</span>
+<span id="cb5-13"><a></a>  )</span>
+<span id="cb5-14"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.9999562</code></pre>
 </div>
@@ -619,22 +627,22 @@ Figure&nbsp;1
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>control <span class="ot">&lt;-</span> <span class="fl">0.6</span></span>
-<span id="cb8-2"><a></a>confidence_seventy <span class="ot">&lt;-</span> <span class="fl">0.7</span></span>
-<span id="cb8-3"><a></a>result <span class="ot">&lt;-</span> phase1b<span class="sc">::</span><span class="fu">predprob</span>(</span>
-<span id="cb8-4"><a></a>  <span class="at">x =</span> <span class="dv">16</span>, <span class="at">n =</span> <span class="dv">23</span>, <span class="at">Nmax =</span> <span class="dv">40</span>, <span class="at">p =</span> control, <span class="at">thetaT =</span> confidence_seventy,</span>
-<span id="cb8-5"><a></a>  <span class="at">parE =</span> <span class="fu">c</span>(<span class="fl">0.6</span>, <span class="fl">0.4</span>)</span>
-<span id="cb8-6"><a></a>)</span>
-<span id="cb8-7"><a></a>result<span class="sc">$</span>result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>control <span class="ot">&lt;-</span> <span class="fl">0.6</span></span>
+<span id="cb7-2"><a></a>confidence_seventy <span class="ot">&lt;-</span> <span class="fl">0.7</span></span>
+<span id="cb7-3"><a></a>result <span class="ot">&lt;-</span> phase1b<span class="sc">::</span><span class="fu">predprob</span>(</span>
+<span id="cb7-4"><a></a>  <span class="at">x =</span> <span class="dv">16</span>, <span class="at">n =</span> <span class="dv">23</span>, <span class="at">Nmax =</span> <span class="dv">40</span>, <span class="at">p =</span> control, <span class="at">thetaT =</span> confidence_seventy,</span>
+<span id="cb7-5"><a></a>  <span class="at">parE =</span> <span class="fu">c</span>(<span class="fl">0.6</span>, <span class="fl">0.4</span>)</span>
+<span id="cb7-6"><a></a>)</span>
+<span id="cb7-7"><a></a>result<span class="sc">$</span>result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.8211011</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>confidence_ninety <span class="ot">&lt;-</span> <span class="fl">0.9</span></span>
-<span id="cb10-2"><a></a>result_high_thetaT <span class="ot">&lt;-</span> phase1b<span class="sc">::</span><span class="fu">predprob</span>(</span>
-<span id="cb10-3"><a></a>  <span class="at">x =</span> <span class="dv">16</span>, <span class="at">n =</span> <span class="dv">23</span>, <span class="at">Nmax =</span> <span class="dv">40</span>, <span class="at">p =</span> control, <span class="at">thetaT =</span> confidence_ninety,</span>
-<span id="cb10-4"><a></a>  <span class="at">parE =</span> <span class="fu">c</span>(<span class="fl">0.6</span>, <span class="fl">0.4</span>)</span>
-<span id="cb10-5"><a></a>)</span>
-<span id="cb10-6"><a></a>result_high_thetaT<span class="sc">$</span>result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>confidence_ninety <span class="ot">&lt;-</span> <span class="fl">0.9</span></span>
+<span id="cb9-2"><a></a>result_high_thetaT <span class="ot">&lt;-</span> phase1b<span class="sc">::</span><span class="fu">predprob</span>(</span>
+<span id="cb9-3"><a></a>  <span class="at">x =</span> <span class="dv">16</span>, <span class="at">n =</span> <span class="dv">23</span>, <span class="at">Nmax =</span> <span class="dv">40</span>, <span class="at">p =</span> control, <span class="at">thetaT =</span> confidence_ninety,</span>
+<span id="cb9-4"><a></a>  <span class="at">parE =</span> <span class="fu">c</span>(<span class="fl">0.6</span>, <span class="fl">0.4</span>)</span>
+<span id="cb9-5"><a></a>)</span>
+<span id="cb9-6"><a></a>result_high_thetaT<span class="sc">$</span>result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.5655589</code></pre>
 </div>
@@ -673,12 +681,12 @@ Figure&nbsp;1
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Predictive Posterior CDF for different Efficacy Rules
+Figure&nbsp;3: Predictive Posterior CDF for different Efficacy Rules
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="operating-characteristics-threshold-for-success-and-failure" class="slide level2">
+<section id="operating-characteristics-threshold-for-success-and-failure" class="slide level2 smaller">
 <h2>Operating Characteristics : threshold for Success (and failure):</h2>
 <ul>
 <li>Efficacy criteria, e.g.&nbsp;we would stop for Efficacy if :</li>
@@ -689,7 +697,7 @@ Figure&nbsp;2: Predictive Posterior CDF for different Efficacy Rules
 </ul>
 <p><code>Pr( RR &lt; p0) &gt; tL</code></p>
 
-<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-24-1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" width="768"></section>
+<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-20-1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" width="768"></section>
 <section id="rules-and-operating-characteristics.-a-use-case-for-ocpostprob" class="slide level2 smaller">
 <h2>Rules and Operating characteristics. A use case for <code>ocPostprob()</code>:</h2>
 <p>Assuming real world (true) responder rate is 30 %.</p>
@@ -699,35 +707,92 @@ Figure&nbsp;2: Predictive Posterior CDF for different Efficacy Rules
 <li>Prior of treatment arm <span class="math inline">\(Beta(0.6, 0.4)\)</span>.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">set.seed</span>(<span class="dv">2025</span>)</span>
-<span id="cb12-2"><a></a>res <span class="ot">&lt;-</span> phase1b<span class="sc">::</span><span class="fu">ocPostprob</span>(</span>
-<span id="cb12-3"><a></a>  <span class="at">nnE =</span> <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">40</span>),</span>
-<span id="cb12-4"><a></a>  <span class="at">truep =</span> <span class="fl">0.40</span>,</span>
-<span id="cb12-5"><a></a>  <span class="at">p0 =</span> <span class="fl">0.20</span>,</span>
-<span id="cb12-6"><a></a>  <span class="at">p1 =</span> <span class="fl">0.30</span>, <span class="co"># Efficacy</span></span>
-<span id="cb12-7"><a></a>  <span class="at">tL =</span> <span class="fl">0.70</span>,</span>
-<span id="cb12-8"><a></a>  <span class="at">tU =</span> <span class="fl">0.70</span>,</span>
-<span id="cb12-9"><a></a>  <span class="at">parE =</span> <span class="fu">c</span>(<span class="fl">0.6</span>, <span class="fl">0.4</span>),</span>
-<span id="cb12-10"><a></a>  <span class="at">sim =</span> <span class="dv">500</span>,</span>
-<span id="cb12-11"><a></a>  <span class="at">wiggle =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb12-12"><a></a>  <span class="at">nnF =</span> <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">40</span>)</span>
-<span id="cb12-13"><a></a>)</span>
-<span id="cb12-14"><a></a>res<span class="sc">$</span>oc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  ExpectedN PrStopEarly PrEarlyEff PrEarlyFut PrEfficacy PrFutility PrGrayZone
-1    28.598       0.684      0.676      0.008       0.84      0.008      0.152</code></pre>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">set.seed</span>(<span class="dv">2025</span>)</span>
+<span id="cb11-2"><a></a>res <span class="ot">&lt;-</span> phase1b<span class="sc">::</span><span class="fu">ocPostprob</span>(</span>
+<span id="cb11-3"><a></a>  <span class="at">nnE =</span> <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">40</span>),</span>
+<span id="cb11-4"><a></a>  <span class="at">truep =</span> <span class="fl">0.40</span>,</span>
+<span id="cb11-5"><a></a>  <span class="at">p0 =</span> <span class="fl">0.20</span>,</span>
+<span id="cb11-6"><a></a>  <span class="at">p1 =</span> <span class="fl">0.30</span>, <span class="co"># Efficacy</span></span>
+<span id="cb11-7"><a></a>  <span class="at">tL =</span> <span class="fl">0.70</span>,</span>
+<span id="cb11-8"><a></a>  <span class="at">tU =</span> <span class="fl">0.70</span>,</span>
+<span id="cb11-9"><a></a>  <span class="at">parE =</span> <span class="fu">c</span>(<span class="fl">0.6</span>, <span class="fl">0.4</span>),</span>
+<span id="cb11-10"><a></a>  <span class="at">sim =</span> <span class="dv">500</span>,</span>
+<span id="cb11-11"><a></a>  <span class="at">wiggle =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb11-12"><a></a>  <span class="at">nnF =</span> <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">40</span>)</span>
+<span id="cb11-13"><a></a>)</span>
+<span id="cb11-14"><a></a>res<span class="sc">$</span>oc <span class="sc">%&gt;%</span></span>
+<span id="cb11-15"><a></a>  <span class="fu">kbl</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb11-16"><a></a>  <span class="fu">kable_styling</span>(<span class="at">font =</span> <span class="st">"Galvji"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<table class="table caption-top" data-quarto-postprocess="true" style="font-size: Galvji; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">ExpectedN</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">PrStopEarly</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">PrEarlyEff</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">PrEarlyFut</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">PrEfficacy</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">PrFutility</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">PrGrayZone</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">28.598</td>
+<td style="text-align: right;">0.684</td>
+<td style="text-align: right;">0.676</td>
+<td style="text-align: right;">0.008</td>
+<td style="text-align: right;">0.84</td>
+<td style="text-align: right;">0.008</td>
+<td style="text-align: right;">0.152</td>
+</tr>
+</tbody>
+</table>
+
+
 </div>
 </div>
 </section>
-<section id="plotting-results-from-ocpostprob" class="slide level2">
-<h2>Plotting results from <code class="smaller">ocPostprob()</code></h2>
+<section id="resource-critical-trial-planning" class="slide level2 smaller">
+<h2>Resource Critical Trial planning</h2>
 
-<!-- ## Operating Characteristics : Curves -->
-<!-- Assuming real world (true) responder rate is 30 %. -->
-<!-- -   Look for Efficacy: Go if $P( \pi > 30\% | \ data ) > 70 \%$ -->
-<!-- -   Look for Futility: Stop if $P( \pi < 20\% | \ data ) > 70 \%$ -->
-<!-- -   Prior of treatment arm $Beta(0.6, 0.4)$. -->
-<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-27-1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" width="960"></section>
+<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-22-1.png" data-fig-pos="H" width="960" class="r-stretch"></section>
+<section id="operating-characteristics-curves" class="slide level2 smaller">
+<h2>Operating Characteristics : Curves</h2>
+<div class="centered-text">
+<p>Assuming real world (true) responder rate is 40 %.</p>
+<ul>
+<li><p>Look for Efficacy: <em>Go</em> if <span class="math inline">\(P( \pi &gt; 30\% | \ data ) &gt; 70 \%\)</span></p></li>
+<li><p>Look for Futility: <em>Stop</em> if <span class="math inline">\(P( \pi &lt; 20\% | \ data ) &gt; 70 \%\)</span></p></li>
+</ul>
+</div>
+
+<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-25-1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" width="960"></section>
+<section id="operating-characteristics-curves-1" class="slide level2 smaller">
+<h2>Operating Characteristics : Curves</h2>
+<ul>
+<li>Look for Futility at Interim: <em>Stop</em> at <strong>Interim</strong> at <span class="math inline">\(P( \pi &lt; 20\% | \ data ) &gt; 70 \%\)</span></li>
+</ul>
+
+<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-26-1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" width="960"></section></section>
+<section id="section-1" class="title-slide slide level1 center">
+<h1></h1>
+
+<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-27-1.png" data-fig-pos="H" width="960" class="r-stretch"></section>
+
+<section id="section-2" class="title-slide slide level1 center">
+<h1></h1>
+
+<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-28-1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" width="960"></section>
+
+<section>
+<section id="section-3" class="title-slide slide level1 center">
+<h1></h1>
+
+<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-29-1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" width="960"></section>
 <section id="expanded-features" class="slide level2 smaller">
 <h2>Expanded features</h2>
 <p>…. and wiggle room!</p>
@@ -897,27 +962,27 @@ Figure&nbsp;2: Predictive Posterior CDF for different Efficacy Rules
 </div>
 </div>
 </section>
-<section id="concluding-remarks" class="slide level2 smaller">
+<section id="concluding-remarks" class="slide level2 smaller" data-background-gradient="linear-gradient(to top, #F8FAB4, #A7AAE1)">
 <h2>Concluding remarks</h2>
 <p><br>
 </p>
 <p><img src="images/yeo_salzburguseR.jpg" align="left" style="display: inline-block; height:450px; width:300px; margin: 0px 50px 0px 0px; display: flex"></p>
 <p><br>
 <code>phase1b</code> can be helpful to many therapeutic areas that use binary endpoint if beta priors are appropriate</p>
-<p>Big thank you to Daniel Sabanés Bové for mentorship. Past colleagues Isaac Gravestock, John Kirkpatrick, Craig Gower-Paige et al who collaborated and supported.</p>
+<p>Acknowledgements to Daniel Sabanés Bové for mentorship. Past colleagues Isaac Gravestock, John Kirkpatrick, Craig Gower-Paige et al who collaborated and supported.</p>
 <p>Issue page <a href="https://github.com/Genentech/phase1b/issues"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"></path></svg></a></p>
-<p>Let’s connect <a href="https://finc-research.com"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"></path></svg></a> <a href="https://www.linkedin.com/in/audreyyeo8000/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a> <a href="https://github.com/audreyyeocH"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="audrey@finc-research.com"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"></path></svg></a></p>
-<p>Code for this presentation <a href="https://github.com/audreyyeoCH/presentations2024/tree/main/2024_talks_in_quarto"><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"></path></svg></a></p>
+<p>Contact <a href="https://finc-research.com"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"></path></svg></a> <a href="https://www.linkedin.com/in/audreyyeo8000/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a> <a href="https://github.com/audreyyeocH"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="audrey@finc-research.com"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"></path></svg></a></p>
+<p>Code for this presentation <a href="https://github.com/finc-research/finc-research-website/blob/main/2025_early_dev.qmd"><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"></path></svg></a></p>
 <p>Similar presentation at <a href="https://iscb2025.info/">ISCB46</a> &amp; <a href="https://www.ibs-roes.org/roes_2025.html">RoES Graz</a></p>
 </section>
-<section id="license-info" class="slide level2">
+<section id="license-info" class="slide level2" data-background-gradient="linear-gradient(to top, #F8FAB4, #A7AAE1)">
 <h2>License info</h2>
 <p><em>Please acknowledge authors and creators</em></p>
 <p><br>
 </p>
 <p>Creative Common License used <a href="https://creativecommons.org/share-your-work/cclicenses/"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M245.83 214.87l-33.22 17.28c-9.43-19.58-25.24-19.93-27.46-19.93-22.13 0-33.22 14.61-33.22 43.84 0 23.57 9.21 43.84 33.22 43.84 14.47 0 24.65-7.09 30.57-21.26l30.55 15.5c-6.17 11.51-25.69 38.98-65.1 38.98-22.6 0-73.96-10.32-73.96-77.05 0-58.69 43-77.06 72.63-77.06 30.72-.01 52.7 11.95 65.99 35.86zm143.05 0l-32.78 17.28c-9.5-19.77-25.72-19.93-27.9-19.93-22.14 0-33.22 14.61-33.22 43.84 0 23.55 9.23 43.84 33.22 43.84 14.45 0 24.65-7.09 30.54-21.26l31 15.5c-2.1 3.75-21.39 38.98-65.09 38.98-22.69 0-73.96-9.87-73.96-77.05 0-58.67 42.97-77.06 72.63-77.06 30.71-.01 52.58 11.95 65.56 35.86zM247.56 8.05C104.74 8.05 0 123.11 0 256.05c0 138.49 113.6 248 247.56 248 129.93 0 248.44-100.87 248.44-248 0-137.87-106.62-248-248.44-248zm.87 450.81c-112.54 0-203.7-93.04-203.7-202.81 0-105.42 85.43-203.27 203.72-203.27 112.53 0 202.82 89.46 202.82 203.26-.01 121.69-99.68 202.82-202.84 202.82z"></path></svg></a></p>
 <p>For <code>phase1b</code> see author list <a href="https://genentech.github.io/phase1b/main/"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M234.5 5.7c13.9-5 29.1-5 43.1 0l192 68.6C495 83.4 512 107.5 512 134.6V377.4c0 27-17 51.2-42.5 60.3l-192 68.6c-13.9 5-29.1 5-43.1 0l-192-68.6C17 428.6 0 404.5 0 377.4V134.6c0-27 17-51.2 42.5-60.3l192-68.6zM256 66L82.3 128 256 190l173.7-62L256 66zm32 368.6l160-57.1v-188L288 246.6v188z"></path></svg></a></p>
-<p>For this presentation, Audrey Yeo <a href="https://finc-research.com"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"></path></svg></a> <a href="https://www.linkedin.com/in/audreyyeo8000/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a> <a href="https://github.com/audreyyeocH"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="audrey@finc-research.com"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"></path></svg></a></p>
+<p><code>phase1b</code> presentations, Audrey Yeo <a href="https://finc-research.com"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"></path></svg></a> <a href="https://www.linkedin.com/in/audreyyeo8000/"><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a> <a href="https://github.com/audreyyeocH"><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a> <a href="audrey@finc-research.com"><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"></path></svg></a></p>
 </section>
 <section id="references" class="slide level2">
 <h2>References</h2>
@@ -941,6 +1006,45 @@ Figure&nbsp;2: Predictive Posterior CDF for different Efficacy Rules
 <h1>Backup slides</h1>
 
 </section>
+<section id="operating-characteristics-table" class="slide level2">
+<h2>Operating Characteristics Table</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">Truth</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Go</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Stop</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Grey</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.20</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.28</td>
+<td style="text-align: right;">0.70</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0.35</td>
+<td style="text-align: right;">0.58</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.42</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0.40</td>
+<td style="text-align: right;">0.80</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.20</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</section>
 <section id="safety-and-efficacy-of-the-bnt162b2-mrna-covid-19-vaccine" class="slide level2 smaller">
 <h2>Safety and Efficacy of the BNT162b2 mRNA Covid-19 Vaccine</h2>
 <div class="columns">
@@ -961,20 +1065,34 @@ Figure&nbsp;2: Predictive Posterior CDF for different Efficacy Rules
 <span class="math display">\[ Interim \ : p &gt; 99.50 \% \]</span> <span class="math display">\[ Final \ : p &gt; 99.50 \% \]</span></p>
 </div></div>
 </section>
-<section id="strength-of-priors-cdf-version" class="slide level2">
-<h2>Strength of Priors (CDF version)</h2>
+<section id="detour-polack-et-al-2020-phase-iii-trial" class="slide level2">
+<h2>Detour : <a href="10.1056/NEJMoa2034577">Polack et al (2020)</a>, Phase III trial</h2>
 
-<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-30-1.png" data-fig-pos="H" width="960" class="r-stretch"></section>
-<section id="strength-of-priors-on-predictive-posteriors-cdf-version" class="slide level2">
-<h2>Strength of Priors on Predictive Posteriors (CDF version)</h2>
+<!-- case rate ratio = case rate in vaxxed group / case rate in placebo group -->
+<!-- The case rate ratio, also known as the incidence rate ratio (IRR), is a measure used to calculate vaccine efficacy (VE). The formula is VE = 1 - IRR, where IRR is the ratio of the case rate in the vaccinated group to the case rate in the unvaccinated group. Case rates are calculated as the number of cases per person-time (e.g., person-years), and the formula for the IRR is: \(IRR=\frac{\frac{cases_{v}}{time_{v}}}{\frac{cases_{p}}{time_{p}}}\) \(cases_{v}\) = number of cases in the vaccinated group\(time_{v}\) = total person-time in the vaccinated group\(cases_{p}\) = number of cases in the placebo (unvaccinated) group\(time_{p}\) = total person-time in the placebo group -->
+<img data-src="images/pollock2020_table2.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" width="654"></section>
+<section id="beta-prior-and-mean-for-bnt162b2-phase-iii" class="slide level2">
+<h2>Beta Prior and Mean for BNT162b2 Phase III :</h2>
 
-<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-31-1.png" data-fig-pos="H" width="960" class="r-stretch"></section>
+<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-33-1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" width="960"></section>
+<section id="posterior-and-mean-for-bnt162b2-phase-iii" class="slide level2">
+<h2>Posterior and Mean for BNT162b2 Phase III :</h2>
+
+<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-35-1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" width="960"></section>
+<section id="strength-of-priors-on-posterior-probability-cdf" class="slide level2">
+<h2>Strength of Priors on Posterior Probability (CDF)</h2>
+
+<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-36-1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" width="960"></section>
+<section id="strength-of-priors-on-predictive-posteriors-cdf" class="slide level2">
+<h2>Strength of Priors on Predictive Posteriors (CDF)</h2>
+
+<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-37-1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" width="960"></section>
 <section id="evaluating-the-difference-between-two-arms" class="slide level2 smaller">
 <h2>Evaluating the difference between two arms ?</h2>
 <p>Meaningful improvement if <span class="math display">\[ \Delta &gt; 15\% \ when \ \Delta = \pi_{E} - \pi_{S}\]</span></p>
 <p>Efficacious if <span class="math display">\[ Pr( \Delta &gt; 15 \% | data ) &gt; 70\% \ otherwise \ Pr( \Delta &lt; 15 \% | data ) &gt; 70\% \]</span></p>
 
-<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-34-1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" width="960"></section>
+<img data-src="2025_early_dev_files/figure-revealjs/unnamed-chunk-40-1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="H" width="960"></section>
 <section id="standard-of-care-distribution-when-unknown-...dist-series" class="slide level2 smaller">
 <h2>Standard of Care Distribution when unknown, <code>...Dist</code> series:</h2>
 <p>Concerning:</p>
@@ -1115,7 +1233,7 @@ Figure&nbsp;2: Predictive Posterior CDF for different Efficacy Rules
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: 'c/t',
+        slideNumber: false,
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
