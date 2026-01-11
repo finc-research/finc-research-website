@@ -30,7 +30,6 @@ doi: 10.1515/jpm-2020-0007 [Paper](https://doi.org/10.1515/jpm-2020-0007)
 
 Palace, J., Traboulsee, A., Saiz, A., De Seze, J., Kleiter, I., Bennett, J.L., Stokmaier, D., Klingelschmitt, G., **Yeo Te-ying, A.**, Vodopivec, I. and Yamamura, T. (2024) Long-term Efficacy of Satralizumab in Patients with Aquaporin-4-IgG-seropositive (AQP4-IgG+) Neuromyelitis Optica Spectrum Disorder (NMOSD): Updated Analysis from the Open-label SAkuraMoon Study (S32.002)’, Neurology, 102(17 Supplement 1). doi: 10.1212/WNL.0000000000204402. [Paper](https://www.neurology.org/doi/10.1212/WNL.0000000000204402)
 
-Reference List Format (All Authors)
 Fabregat-Franco, C., Yoo, C., Sangro, B., Qvortrup, C., Kim, H.D., Macarulla, T., Ponz-Sarvisé, M., Lin, C.C., Oh, D.Y., Yau, T., Bessa, J., Schwalie, P.C., Dettling, S., Schlenker, R., Riede, N., Hall, E., Lichtenegger, F., Kratochwil, N., Pöschinger, T., Jiang, Z., Jiang, T., Sie, C.G., **Yeo Te-ying, A.**, Schiff, C., Hoves, S. and Cannarile, M.; Abstract 2342: RO7119929, a TLR7 agonist prodrug, induces local inflammation of the tumor microenvironment (TME) by reprogramming myeloid cells in patients (pts) with advanced primary or metastatic liver cancers. Cancer Res 1 April 2023; 83 (7_Supplement): 2342.  [Paper](https://doi.org/10.1158/1538-7445.AM2023-2342)
 
 more to come ...
