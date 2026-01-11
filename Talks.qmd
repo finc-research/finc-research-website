@@ -8,54 +8,62 @@ format:
 embed-resources: true
 ---
 
-::: columns
+::::: columns
 ::: {.column width="70%"}
-**Upcoming Talks** :
+**Recent Talks** :
 
 -   [Pre-Conference Course : Good Software Engineering for R packages](https://openstatsware.github.io/shortcourse-iscb2025/) with Daniel Sabanés Bové & Alessandro Gasparini - International Society of Clinical Biostatistics, Basel, CH - 2025
 -   [NS&IBGH Scientific Knowledge Sharing Meeting](2025_NeuroStatsNovartis_phase1b.html), Novartis Headquarters, Basel, CH - 2025
-- [Poster Presentation](https://github.com/finc-research/technical_talks/blob/main/phase1b_poster/2025_submitted_YEO_Audrey_phase1b_poster_iscb.pdf), International Society of Clinical Biostatistics, Basel, CH - 2025
-- Poster Presentation TBA, RoES, Graz, AT - 2025
-- Research Software Engineering Conf TBA, Warwick, UK - 2025
-
-Recent Talks :
-
+-   [Poster Presentation](https://github.com/finc-research/technical_talks/blob/main/phase1b_poster/2025_submitted_YEO_Audrey_phase1b_poster_iscb.pdf), International Society of Clinical Biostatistics, Basel, CH - 2025
+-   Poster Presentation, RoES, Graz, AT - 2025
+-   Research Software Engineering Conf, Warwick, UK - 2025
 -   [Practical Bayesian Statistics](2025_DAGStat_Practical_Bayesian_Statistics_DAGStat.html) DAGStat, Berlin, DE - 2025
 -   [Good Statistical Software Engineering for R Packages](2025_DAGStat_GSWEP.html) DAGStat, Berlin, DE - 2025
 -   [Gearing Statisticians up for Software Success](2024_PHUSE24_Gearing_Statisticians_Software_Success.html) PHUSE, Basel, CH - 2024
-::: 
-::: {.column width="25%"}
-![](media/finc_and_qr_transparent_final_hex-Photoroom.png)
-::: 
-:::
+
+**Publication List** :
+
+Kimmich, N., **Yeo Te-ying, A.**, Zimmermann, R., & Furrer, E. (2020). How do sustained birth tears after vaginal birth affect birth tear patterns in a subsequent birth? Journal of Perinatal Medicine, 48(4), 335–344. 
+doi: 10.1515/jpm-2020-0007 [Paper](https://doi.org/10.1515/jpm-2020-0007)
+
+**Yeo Te-ying, A.**, Furrer E, Zimmerman R, Kimmich M (2019) Wie wirken sich erlittene Geburtsverletzungen nach Vaginalgeburt auf das Verletzungsmuster einer Folgegeburt aus? [Conference paper](https://www.researchgate.net/publication/337602695_Wie_wirken_sich_erlittene_Geburtsverletzungen_nach_Vaginalgeburt_auf_das_Verletzungsmuster_einer_Folgegeburt_aus)
+
+Palace, J., Traboulsee, A., Saiz, A., De Seze, J., Kleiter, I., Bennett, J.L., Stokmaier, D., Klingelschmitt, G., **Yeo Te-ying, A.**, Vodopivec, I. and Yamamura, T. (2024) Long-term Efficacy of Satralizumab in Patients with Aquaporin-4-IgG-seropositive (AQP4-IgG+) Neuromyelitis Optica Spectrum Disorder (NMOSD): Updated Analysis from the Open-label SAkuraMoon Study (S32.002)’, Neurology, 102(17 Supplement 1). doi: 10.1212/WNL.0000000000204402. [Paper](https://www.neurology.org/doi/10.1212/WNL.0000000000204402)
+
+Reference List Format (All Authors)
+Fabregat-Franco, C., Yoo, C., Sangro, B., Qvortrup, C., Kim, H.D., Macarulla, T., Ponz-Sarvisé, M., Lin, C.C., Oh, D.Y., Yau, T., Bessa, J., Schwalie, P.C., Dettling, S., Schlenker, R., Riede, N., Hall, E., Lichtenegger, F., Kratochwil, N., Pöschinger, T., Jiang, Z., Jiang, T., Sie, C.G., **Yeo Te-ying, A.**, Schiff, C., Hoves, S. and Cannarile, M.; Abstract 2342: RO7119929, a TLR7 agonist prodrug, induces local inflammation of the tumor microenvironment (TME) by reprogramming myeloid cells in patients (pts) with advanced primary or metastatic liver cancers. Cancer Res 1 April 2023; 83 (7_Supplement): 2342.  [Paper](https://doi.org/10.1158/1538-7445.AM2023-2342)
+
+more to come ...
+
+**Software** :
+
+Sabanes Bove D, Elze M, Pourmohamad T, Zhu J, Lymp J, Teterina A, *Yeo Te-ying A* (2025). phase1b: Calculations for decisions on Phase 1b clinical trials. R package version 1.0.0, https://github.com/genentech/phase1b/.
 
 Other Research Activities
 
-- OpenStatsWare
-- R in Pharma Committee
-- Research Software Engineering Conference 2025 Reviewer
-- Open Source Pharma Committee Member
-- R Consortium Board member
-- HTA R Consortium Working group
+-   OpenStatsWare
+-   R in Pharma Committee
+-   Research Software Engineering Conference 2025 Reviewer
+-   Open Source Pharma Committee Member
+-   R Consortium Board member
+-   HTA R Consortium Working group
 
-Appreciation post :
+:::
 
-::: columns
+
+::: {.column width="25%"}
+![](media/finc_and_qr_transparent_final_hex-Photoroom.png)
+:::
+:::::
+
+:::::: columns
 ::: {.column width="70%"}
-I appreciate the chats and presentations that I have with the community.
-
-If you feel the same and would like to buy me a coffee/book, you can do so 
-[here](https://buymeacoffee.com/audreytyeoh) :
-
-USD and other currencies accepted.
 :::
 
 ::: {.column width="5%"}
-
 :::
 
-::: {.column width="25%"}
-![](media/bmc_qr.png){width=60%}
-:::
+::: {.column width="5%"}
 :::
 
+:::::
