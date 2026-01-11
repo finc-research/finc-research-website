@@ -42,11 +42,9 @@ Sabanes Bove D, Elze M, Pourmohamad T, Zhu J, Lymp J, Teterina A, *Yeo Te-ying A
 Other Research Activities
 
 -   OpenStatsWare
--   R in Pharma Committee
 -   Research Software Engineering Conference 2025 Reviewer
 -   Open Source Pharma Committee Member
 -   R Consortium Board member
--   HTA R Consortium Working group
 
 :::
 

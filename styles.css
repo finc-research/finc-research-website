@@ -27,19 +27,29 @@
     background: linear-gradient(65deg, #E8EEC5 0%, #fad0c4 100%);
   }
 }
-
 body {
   margin: 0;
-  height: 100vh;
+  /* 1. Change height to min-height so it can grow larger than the screen */
+  min-height: 100vh; 
+  
   font-family: Georgia, Sans-Serif;
-  justify-content: center;
-  align-items: center;
-  min-height: 150vh;
-  display: flex; /* Good for centering potential content */
-  background: linear-gradient(45deg, #F9CEDC, #fad0c4, #fbc2eb, #ffd1ff, #CEE9F9, #E8EEC5, #F9CEDC); /* Include all your colors in the main gradient */
-  background-size: 400% 400%; /* Make it larger than the viewport */
-  animation: infiniteGradient 15s linear infinite; /* Adjust the duration as needed */
+  
+  /* 2. Remove 'justify-content' and 'align-items' from body */
+  /* These are what cause the "top clipping" when content is long */
+  display: flex; 
+  flex-direction: column; /* Stacks content vertically */
+  align-items: stretch;   /* Ensures content takes up full width */
+  
+  /* 3. Gradient remains the same */
+  background: linear-gradient(45deg, #F9CEDC, #fad0c4, #fbc2eb, #ffd1ff, #CEE9F9, #E8EEC5, #F9CEDC);
+  background-size: 400% 400%; 
+  animation: infiniteGradient 15s linear infinite;
+  
+  /* 4. Optional: Add padding so content doesn't touch the very edges */
+  padding: 20px;
+  box-sizing: border-box;
 }
+
 
 /* Infinite gradient animation using background-position */
 @keyframes infiniteGradient {
