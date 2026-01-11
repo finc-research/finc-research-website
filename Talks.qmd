@@ -36,7 +36,7 @@ more to come ...
 
 **Software** :
 
-Sabanes Bove D, Elze M, Pourmohamad T, Zhu J, Lymp J, Teterina A, *Yeo Te-ying A* (2025). phase1b: Calculations for decisions on Phase 1b clinical trials. R package version 1.0.0, https://github.com/genentech/phase1b/.
+Sabanes Bove D, Elze M, Pourmohamad T, Zhu J, Lymp J, Teterina A, **Yeo Te-ying A** (2025). phase1b: Calculations for decisions on Phase 1b clinical trials. R package version 1.0.0, [https://github.com/genentech/phase1b/](https://github.com/genentech/phase1b/)
 
 Other Research Activities
 
