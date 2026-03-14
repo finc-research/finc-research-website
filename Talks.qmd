@@ -10,6 +10,10 @@ embed-resources: true
 
 ::::: columns
 ::: {.column width="70%"}
+**New Talks** :
+
+- [CEN : Central European Network 2026](cen2026.org) Oral Presentation TBA. Warsaw, Poland - 2026
+
 **Recent Talks** :
 
 -   [Pre-Conference Course : Good Software Engineering for R packages](https://openstatsware.github.io/shortcourse-iscb2025/) with Daniel Sabanés Bové & Alessandro Gasparini - International Society of Clinical Biostatistics, Basel, CH - 2025
