@@ -12,7 +12,7 @@ embed-resources: true
 ::: {.column width="70%"}
 **New Talks** :
 
-- [CEN : Central European Network 2026](cen2026.org) Oral Presentation TBA. Warsaw, Poland - 2026
+- [CEN : Central European Network 2026](cen2026.org) Oral Presentation TBA. Warsaw, PL - 2026
 
 **Recent Talks** :
 
