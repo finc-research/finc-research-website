@@ -36,7 +36,9 @@ Palace, J., Traboulsee, A., Saiz, A., De Seze, J., Kleiter, I., Bennett, J.L., S
 
 Fabregat-Franco, C., Yoo, C., Sangro, B., Qvortrup, C., Kim, H.D., Macarulla, T., Ponz-Sarvisé, M., Lin, C.C., Oh, D.Y., Yau, T., Bessa, J., Schwalie, P.C., Dettling, S., Schlenker, R., Riede, N., Hall, E., Lichtenegger, F., Kratochwil, N., Pöschinger, T., Jiang, Z., Jiang, T., Sie, C.G., **Yeo Te-ying, A.**, Schiff, C., Hoves, S. and Cannarile, M.; Abstract 2342: RO7119929, a TLR7 agonist prodrug, induces local inflammation of the tumor microenvironment (TME) by reprogramming myeloid cells in patients (pts) with advanced primary or metastatic liver cancers. Cancer Res 1 April 2023; 83 (7_Supplement): 2342.  [Paper](https://doi.org/10.1158/1538-7445.AM2023-2342)
 
-more to come ...
+Yoo C, Fabregat-Franco C, Lin CC, Qvortrup C, Oh DY, Yau T, Kim HD, Castet F, Ponz Sarvise M, Hsu C, Rohrberg KS, Lichtenegger FS, Franjkovic I, Kratochwil NA, Bessa J, Rossmann E, Schwalie PC, Rieder N, Pöschinger T, Sie CG, Dettling S, Schlenker R, Jiang T, Dai C, Yun H, Hall E, **Yeo Te-Ying**, A, Hoves S, Cannarile MA, Schiff C, Sangro B. First-in-human phase 1 study of RO7119929, an oral TLR7 agonist prodrug, in patients with advanced primary or metastatic liver cancers. J Immunother Cancer. 2026 Mar 9;14(3):e012783. doi: 10.1136/jitc-2025-012783. PMID: 41802810; PMCID: PMC12983939.[Paper](https://pubmed.ncbi.nlm.nih.gov/41802810/#full-view-affiliation-12)
+
+more to come !
 
 **Software** :
 
