@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: black;
+  overflow: hidden;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 0;
+}
+
+#title {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Fira Code', monospace;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 5px #000;
+  z-index: 1;
+}

@@ -169,11 +169,24 @@ df_thetaTlow$cumul_x <- df_thetaTlow$counts + 16
 
 df_thetaThigh <- data %>% dplyr::filter(thetaT == "90%")
 df_thetaThigh$cumul_x <- df_thetaThigh$counts + 16
+
+# {background-iframe="polska/dist/index.html"}#84C5B1
+# A Bayesian approach to decision making in early development Oncology clinical trials {background-iframe="raindropp0/dist/index.html" style="color: #0066cc;"} -->
+# that earlier green 16C47F
+# whiter silver F3F2EC
 ```
 
-# A Bayesian approach to decision making in early development Oncology clinical trials{background-gradient="linear-gradient(to top, #F8FAB4, #A7AAE1)"}
+```{css, echo=FALSE}
+#my-slide h1 {
+  color: #DCDCDC !important;
+}
+```
 
-Audrey Yeo, Basel - CH
+# A Bayesian approach to decision making in early development Oncology clinical trials {#my-slide background-iframe="raindropp0/dist/index.html"}
+
+[Audrey Yeo | Warszawa - Polska]{style="color: #8BDB81;"}
+[19 maja]{style="color: white;"}
+[CEN 2026]{style="color: #E62727;"}
 
 
 ## Introduction
@@ -210,11 +223,11 @@ Audrey Yeo, Basel - CH
 
 :::::: columns
 ::: {.column width="40%"}
--   Introduce Beta Binomial model
--   Explore `postprob` and `predprob`
--   Explore simulation studies using `ocPostprob`
--   Operating characteristics
--   Question and answer
+- Introduce Beta Binomial model
+- Explore `postprob` and `predprob`
+- Explore simulation studies using `ocPostprob`
+- Operating characteristics
+- Question and answer
 :::
 
 ```{r}
@@ -244,41 +257,36 @@ knitr::include_graphics("images/beta_binom_schema.png")
 
 ## Prior and Posterior of Beta Distribution for response rate {.smaller}
 
--   Conjugate Prior \pi is $f(\pi)$, where
-    $\pi \sim {Beta(\alpha, \beta)}$, same family of distribution of
-    Posterior (see below)
+- Conjugate Prior \pi is $f(\pi)$, where
+  $\pi \sim {Beta(\alpha, \beta)}$, same family of distribution of
+  Posterior (see below)
 
--   We know the mean response rate (RR) is :
-    $$\pi = \ \frac {\alpha}{\alpha + \beta}$$
+- We know the mean response rate (RR) is :
+  $$\pi = \ \frac {\alpha}{\alpha + \beta}$$
 
--   Likelihood is $f(x|\pi)$, where $x \sim {Binomial(x, n)}$
+- Likelihood is $f(x|\pi)$, where $x \sim {Binomial(x, n)}$
 
--   The updated Posterior $f( \pi | x )$ is again a $Beta$ distribution
-    (same family as prior) :
-    $$ \pi| \ x \sim Beta(\alpha + x, \ \beta + n - x)$$ where $x$ is
-    the number of responders of current trials
-
-
-
-
+- The updated Posterior $f( \pi | x )$ is again a $Beta$ distribution
+  (same family as prior) :
+  $$ \pi| \ x \sim Beta(\alpha + x, \ \beta + n - x)$$ where $x$ is the
+  number of responders of current trials
 
 ## History and how to install : {.smaller}
 
--   2015 : Started as a need in Roche's early development group, package
-    development led by Daniel Sabanés Bové in 2015.
-    [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
-    [`r fontawesome::fa("github")`](https://github.com/danielinteractive)
-    [`r fontawesome::fa("globe")`](https://rconis.com)
+- 2015 : Started as a need in Roche's early development group, package
+  development led by Daniel Sabanés Bové in 2015.
+  [`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/danielsabanesbove/)
+  [`r fontawesome::fa("github")`](https://github.com/danielinteractive)
+  [`r fontawesome::fa("globe")`](https://rconis.com)
 
--   2023 : Refactoring, Renaming, adding Unit and Integration tests as
-    current State-of-Art Software Engineering practice.
+- 2023 : Refactoring, Renaming, adding Unit and Integration tests as
+  current State-of-Art Software Engineering practice.
 
--   2026 : CRAN submission is anticipated
+- 2026 : CRAN submission is anticipated
 
--   100% written in R and Open Source.
+- 100% written in R and Open Source.
 
--   website :
-    [genentech.github.io/phase1b/](genentech.github.io/phase1b/)
+- website : [genentech.github.io/phase1b/](genentech.github.io/phase1b/)
 
 ```{r, eval = FALSE, echo = TRUE, warning = FALSE}
 library(devtools)
@@ -345,18 +353,17 @@ $P (\pi > 60 \% | \alpha + x, \beta + n - x )$\
 \* Predictive Posterior Probability :
 $P (success \ or \  failure \ at \ final)$
 
-## Updating the Posterior{.smaller}
+## Updating the Posterior {.smaller}
 
 \
 \
 
-::: {.center}
--   Using the formula for the mean, where 
-$$\alpha = 0.6, \beta = 0.4$$
-    and at interim x = 16, n = 23 :
-    $$ \pi = \ \frac {\alpha}{\alpha + \beta} = \ \frac {\alpha_{updated} }{\alpha_{updated} + \beta_{updated}} = \ \frac {16.6 }{16.6 + 7.4} ≈ 69.17 \% $$
+::: center
+- Using the formula for the mean, where $$\alpha = 0.6, \beta = 0.4$$
+  and at interim x = 16, n = 23 :
+  $$ \pi = \ \frac {\alpha}{\alpha + \beta} = \ \frac {\alpha_{updated} }{\alpha_{updated} + \beta_{updated}} = \ \frac {16.6 }{16.6 + 7.4} ≈ 69.17 \% $$
 
-    $$ mode (\pi) = \ \frac {\alpha_{updated} -1 }{\alpha_{updated} + \beta_{updated} - 2} = \ \frac {16.6 -1  }{16.6 + 7.4 - 2} ≈ 70.90 \% $$
+  $$ mode (\pi) = \ \frac {\alpha_{updated} -1 }{\alpha_{updated} + \beta_{updated} - 2} = \ \frac {16.6 -1  }{16.6 + 7.4 - 2} ≈ 70.90 \% $$
 :::
 
 ## 
@@ -414,8 +421,8 @@ p + theme(
 
 ## A variety of Priors {.smaller}
 
--   To illustrate how density of Prior changes with increased sample
-    size even though mean is the same
+- To illustrate how density of Prior changes with increased sample size
+  even though mean is the same
 
 ```{r, fig.align="center"}
 #| out-width: "70%"
@@ -458,7 +465,7 @@ p + theme(
 
 ## A variety of Posteriors with varying priors {.smaller}
 
--   Data showed 16 of 23 responders (\~69% response rate)
+- Data showed 16 of 23 responders (\~69% response rate)
 
 ```{r, fig.align="center"}
 #| out-width: "70%"
@@ -573,12 +580,11 @@ q
 
 ## Terminology {.smaller}
 
--   A look = stop is when a rule is applied
--   The rule = criteria is specified for Go, Stop or Evaluate (Grey
-    zone)
--   If the rule is met, the result is Go, Stop or Evaluate (Grey zone)
--   Go = Success = Efficacious
--   Stop = Failure = Futile
+- A look = stop is when a rule is applied
+- The rule = criteria is specified for Go, Stop or Evaluate (Grey zone)
+- If the rule is met, the result is Go, Stop or Evaluate (Grey zone)
+- Go = Success = Efficacious
+- Stop = Failure = Futile
 
 ## `postprob()` example (Lee & Liu, 2008) {.smaller}
 
@@ -629,11 +635,11 @@ phase1b::postprob(x = 16, n = 23, p = 0.60, par = c(0.6, 0.4))
 
 ::::: columns
 ::: {.column width="20"}
--   $\alpha$ = 0.6 = number of responses
--   $\beta$ = 0.4 = number of non-responses
--   $\alpha + \beta$ = 1 = sample size
--   $\mu = 60 \%$
--   $CI = ( 0.66 \%, 99.98 \% )$
+- $\alpha$ = 0.6 = number of responses
+- $\beta$ = 0.4 = number of non-responses
+- $\alpha + \beta$ = 1 = sample size
+- $\mu = 60 \%$
+- $CI = ( 0.66 \%, 99.98 \% )$
 :::
 
 ::: {.column width="50%"}
@@ -699,11 +705,11 @@ ggplot(data_prior[data_prior$Category == Mix, ]) +
 
 ::::: columns
 ::: {.column width="40"}
--   $\alpha$ = 6 = number of responses
--   $\beta$ = 4 = number of non-responses
--   $\alpha + \beta$ = 10 = sample size
--   $\mu = 60 \%$
--   $CI = ( 29.93 \% , 86.30 \% )$
+- $\alpha$ = 6 = number of responses
+- $\beta$ = 4 = number of non-responses
+- $\alpha + \beta$ = 10 = sample size
+- $\mu = 60 \%$
+- $CI = ( 29.93 \% , 86.30 \% )$
 :::
 
 ::: {.column width="50%"}
@@ -798,14 +804,17 @@ weaker_prior <- phase1b::postprob(x = 16, n = 23, p = 0.60, par = c(0.6, 0.4))
 
 stronger_prior <- phase1b::postprob(x = 16, n = 23, p = 0.60, par = c(6, 4))
 ```
+
 <!-- print(paste0("postprob of Weaker prior = ", round(weaker_prior, digits = 3), " and postprob of Stronger prior = ", round(stronger_prior, digits = 3))) -->
 
-Posterior probability of Weaker prior is `r 100*round(weaker_prior, digits = 4)`% and of Stronger prior is `r 100*round(stronger_prior, digits = 4)`%.
+Posterior probability of Weaker prior is
+`r 100*round(weaker_prior, digits = 4)`% and of Stronger prior is
+`r 100*round(stronger_prior, digits = 4)`%.
 
 ## Posterior Probability {.smaller}
 
--   Interim trial is efficacious if posterior probability exceeds 70% or
-    P( RR ≥ 60 % \| data ) \> 70%
+- Interim trial is efficacious if posterior probability exceeds 70% or
+  P( RR ≥ 60 % \| data ) \> 70%
 
 ```{r, fig.align='center'}
 #| label: fig-post
@@ -930,10 +939,10 @@ plot_post_strong <- plot_post_strong0 +
 plot_grid(plot_post_weak, NULL, plot_post_strong, rel_widths = c(1, 0, 1), align = "hv", nrow = 1)
 ```
 
-## Posterior Probability (continued){.smaller}
+## Posterior Probability (continued) {.smaller}
 
--   Interim trial is efficacious if posterior probability exceeds 70% or
-    P( RR ≥ 60 % \| data ) \> 70%
+- Interim trial is efficacious if posterior probability exceeds 70% or
+  P( RR ≥ 60 % \| data ) \> 70%
 
 ```{r}
 #| label: fig-postcont
@@ -1010,7 +1019,6 @@ plot_post_strong <- plot_post_strong0 +
 
 plot_grid(plot_post_weak, NULL, plot_post_strong, rel_widths = c(1, 0, 1), align = "hv", nrow = 1)
 ```
-
 
 ## Beta Prior Mixture {.smaller}
 
@@ -1163,11 +1171,11 @@ ggplot(df_thetaThigh) +
 
 ## Operating Characteristics : threshold for Success (and failure): {.smaller}
 
--   Efficacy criteria, e.g. we would stop for Efficacy if :
+- Efficacy criteria, e.g. we would stop for Efficacy if :
 
 `Pr( RR > p1) > tU`
 
--   Futility criteria, eg. we would stop for Futility if :
+- Futility criteria, eg. we would stop for Futility if :
 
 `Pr( RR < p0) > tL`
 
@@ -1237,9 +1245,9 @@ sim_line
 
 Assuming real world (true) responder rate is 30 %.
 
--   Look for Efficacy: Go if $P( \pi > 30\% | \ data ) > 70 \%$
--   Look for Futility: Stop if $P( \pi < 20\% | \ data ) > 70 \%$
--   Prior of treatment arm $Beta(0.6, 0.4)$.
+- Look for Efficacy: Go if $P( \pi > 30\% | \ data ) > 70 \%$
+- Look for Futility: Stop if $P( \pi < 20\% | \ data ) > 70 \%$
+- Prior of treatment arm $Beta(0.6, 0.4)$.
 
 ```{r, echo = TRUE, warning = FALSE}
 #| code-fold: true
@@ -1282,7 +1290,6 @@ sim_line + geom_segment(
     family = "Galvji"
   ) # FF3F7F
 ```
-
 
 ```{r}
 #| echo: FALSE
@@ -1368,12 +1375,13 @@ plotOc0(
 ```
 
 ## Operating Characteristics : Curves {.smaller}
-::: {.centered-text}
+
+::: centered-text
 Assuming real world (true) responder rate is 40 %.
 
--   Look for Efficacy: *Go* if $P( \pi > 30\% | \ data ) > 70 \%$
+- Look for Efficacy: *Go* if $P( \pi > 30\% | \ data ) > 70 \%$
 
--   Look for Futility: *Stop* if $P( \pi < 20\% | \ data ) > 70 \%$
+- Look for Futility: *Stop* if $P( \pi < 20\% | \ data ) > 70 \%$
 :::
 
 ```{r}
@@ -1541,8 +1549,8 @@ p
 
 ## Operating Characteristics : Curves {.smaller}
 
--   Look for Futility at Interim: *Stop* at **Interim** at
-    $P( \pi < 20\% | \ data ) > 70 \%$
+- Look for Futility at Interim: *Stop* at **Interim** at
+  $P( \pi < 20\% | \ data ) > 70 \%$
 
 ```{r}
 #| fig-align: center
@@ -1563,7 +1571,7 @@ p + geom_line(
 q
 ```
 
-#
+# 
 
 ```{r}
 target_value <- 0.4
@@ -1607,7 +1615,8 @@ q +
     size = 3
   )
 ```
-#
+
+# 
 
 ```{r, fig.align = "center"}
 target_value <- 0.35
@@ -1651,6 +1660,7 @@ q +
     size = 3
   )
 ```
+
 # 
 
 ```{r, fig.align = "center"}
@@ -1713,7 +1723,7 @@ Features %>%
   kable_classic(lightable_options = "hover", html_font = "\"Source Sans Pro\", helvetica, sans-serif")
 ```
 
-## Concluding remarks  {background-gradient="linear-gradient(to top, #F8FAB4, #A7AAE1)" .smaller} 
+## Concluding remarks {.smaller}
 
 \
 
@@ -1737,8 +1747,7 @@ Code for this presentation
 Similar presentation at [ISCB46](https://iscb2025.info/) & [RoES
 Graz](https://www.ibs-roes.org/roes_2025.html)
 
-
-## License info{background-gradient="linear-gradient(to top, #F8FAB4, #A7AAE1)"}
+## License info
 
 *Please acknowledge authors and creators*
 
@@ -1758,38 +1767,37 @@ For `phase1b` see author list
 
 ## References
 
--   Thall P F, Simon R (1994), Practical Guidelines for Phase IIB
-    Clinical Trials, Biometrics, 50, 337-349
+- Thall P F, Simon R (1994), Practical Guidelines for Phase IIB Clinical
+  Trials, Biometrics, 50, 337-349
 
--   Lee J J, Liu D D (2008), A Predictive probability design for phase
-    II cancer clinical trials, 5(2), 93-106, Clinical Trials
+- Lee J J, Liu D D (2008), A Predictive probability design for phase II
+  cancer clinical trials, 5(2), 93-106, Clinical Trials
 
--   Yeo, A T, Sabanés Bové D, Elze M, Pourmohamad T, Zhu J, Lymp J,
-    Teterina A (2024). Phase1b : Calculations for decisions on Phase 1b
-    clinical trials. R package version 1.0.0,
-    <https://genentech.github.io/phase1b>
+- Yeo, A T, Sabanés Bové D, Elze M, Pourmohamad T, Zhu J, Lymp J,
+  Teterina A (2024). Phase1b : Calculations for decisions on Phase 1b
+  clinical trials. R package version 1.0.0,
+  <https://genentech.github.io/phase1b>
 
--   Inclusive Speaker Orientation [Linux
-    Foundation](https://training.linuxfoundation.org/training/inclusive-speaker-orientation/)
+- Inclusive Speaker Orientation [Linux
+  Foundation](https://training.linuxfoundation.org/training/inclusive-speaker-orientation/)
 
 ## Some more references
 
--   Zeileis, Fisher, Hornik, Ihaka, McWhite, Murrell, Stauffer, Wilke
-    (2020). colorspace: A Toolbox for Manipulating and Assessing Colors
-    and Palettes. Journal of Statistical Software.
+- Zeileis, Fisher, Hornik, Ihaka, McWhite, Murrell, Stauffer, Wilke
+  (2020). colorspace: A Toolbox for Manipulating and Assessing Colors
+  and Palettes. Journal of Statistical Software.
 
--   Pollock et al (2020). Safety and Efficacy of the BNT162b2 mRNA
-    Covid-19 Vaccine. The New England Journal of Medicine. Vol. 383. No.
-    27, doi: 10.1056/NEJMoa203457
+- Pollock et al (2020). Safety and Efficacy of the BNT162b2 mRNA
+  Covid-19 Vaccine. The New England Journal of Medicine. Vol. 383. No.
+  27, doi: 10.1056/NEJMoa203457
 
--   Roychoudhury, S (2022) A Bayesian Group-sequential Design for
-    COVID-19 Vaccine Development, DIA BSWG F2F Meeting, Joint
-    Statistician Meeting, Washington DC August 9th, 2022
+- Roychoudhury, S (2022) A Bayesian Group-sequential Design for COVID-19
+  Vaccine Development, DIA BSWG F2F Meeting, Joint Statistician Meeting,
+  Washington DC August 9th, 2022
 
 # Backup slides
 
 ## Operating Characteristics Table
-
 
 ```{r}
 #| echo: false
@@ -2287,18 +2295,18 @@ plotDecision(summaries, efficacious_prob = 50, futile_prob = 70)
 
 Concerning:
 
--   `postprobDist()`
--   `predprobDist`
--   `ocPostprobDist()`
--   `ocPredprobDist()`
+- `postprobDist()`
+- `predprobDist`
+- `ocPostprobDist()`
+- `ocPredprobDist()`
 
 Using the approach by Thall and Simon (Biometrics, 1994), this evaluates
 the posterior probability of achieving superior response rate in the
 treatment group `E` compared to standard of care `S`.
 
--   The desired improvement is denoted as `delta`. There are two options
-    in using `delta`. The absolute case when `relativeDelta = FALSE` and
-    relative as when `relativeDelta = TRUE`.
+- The desired improvement is denoted as `delta`. There are two options
+  in using `delta`. The absolute case when `relativeDelta = FALSE` and
+  relative as when `relativeDelta = TRUE`.
 
 ## Standard of Care Distribution when unknown, `...Dist` series continued : {.smaller}
 
@@ -2322,55 +2330,56 @@ In summary:
 
 Concerning:
 
--   `predprobDist`
--   `ocPredprobDist()`
--   `ocRctPredprobDist()`
+- `predprobDist`
+- `ocPredprobDist()`
+- `ocRctPredprobDist()`
 
 Predictive posterior probability for Decision 1:
 
 When `decision1 = TRUE`, criteria for Decision 1 for Interim looks are :
 
--   Interim GO : `P( success at final) > phiU`
+- Interim GO : `P( success at final) > phiU`
 
--   Interim STOP : `P( success at final) < phiL`
+- Interim STOP : `P( success at final) < phiL`
 
 When `decision1 = TRUE`, criteria for Decision 1 for Final looks are:
 
--   Final GO : `P( response rate > p0 | data) > tT`
+- Final GO : `P( response rate > p0 | data) > tT`
 
--   Final STOP : `P( response rate > p0 | data ) < tT`
+- Final STOP : `P( response rate > p0 | data ) < tT`
 
 ## Predictive posterior probability for Decision 2 {.smaller}
 
 Still concerning:
 
--   `predprobDist`
--   `ocPredprobDist()`
--   `ocRctPredprobDist()`
+- `predprobDist`
+- `ocPredprobDist()`
+- `ocRctPredprobDist()`
 
 When `decision1 = FALSE`, criteria for Decision 2 for Interim looks are
-:
 
--   Interim GO : `P ( success at final) > phiU`
+:   
 
--   Interim STOP : `P (failure at final ) > phiFu`
+- Interim GO : `P ( success at final) > phiU`
+
+- Interim STOP : `P (failure at final ) > phiFu`
 
 When `decision1 = FALSE`, criteria for Decision 2 for Final looks are :
 
--   Final GO : `P( response rate > p0 | data) > tT`
+- Final GO : `P( response rate > p0 | data) > tT`
 
--   Final STOP : `P( response rate  < p1 | data) > tF`
+- Final STOP : `P( response rate  < p1 | data) > tF`
 
 ## Posterior probability {.smaller}
 
 Concerning:
 
--   `postprobDist()`
--   `ocPostprobDist()`
--   `ocRctPostprobDist()`
+- `postprobDist()`
+- `ocPostprobDist()`
+- `ocRctPostprobDist()`
 
 At final, the criteria are:
 
--   Final GO : `Pr( response rate > p1 | data) > tU`
+- Final GO : `Pr( response rate > p1 | data) > tU`
 
--   Final STOP : `Pr( response rate < p0 | data) > tL`
+- Final STOP : `Pr( response rate < p0 | data) > tL`
