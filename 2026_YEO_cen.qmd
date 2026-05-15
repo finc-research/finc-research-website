@@ -169,20 +169,15 @@ df_thetaTlow$cumul_x <- df_thetaTlow$counts + 16
 
 df_thetaThigh <- data %>% dplyr::filter(thetaT == "90%")
 df_thetaThigh$cumul_x <- df_thetaThigh$counts + 16
-
-# {background-iframe="polska/dist/index.html"}#84C5B1
-# A Bayesian approach to decision making in early development Oncology clinical trials {background-iframe="raindropp0/dist/index.html" style="color: #0066cc;"} -->
-# that earlier green 16C47F
-# whiter silver F3F2EC
 ```
 
 ```{css, echo=FALSE}
-#my-slide h1 {
+#b-dar h1 {
   color: #DCDCDC !important;
 }
 ```
 
-# A Bayesian approach to decision making in early development Oncology clinical trials {#my-slide background-iframe="raindropp0/dist/index.html"}
+# A Bayesian approach to decision making in early development Oncology clinical trials {#b-dar background-iframe="raindropp0/dist/index.html"}
 
 [Audrey Yeo | Warszawa - Polska]{style="color: #8BDB81;"}
 [19 maja]{style="color: white;"}
