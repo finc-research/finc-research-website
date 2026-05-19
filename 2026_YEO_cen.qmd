@@ -177,7 +177,7 @@ df_thetaThigh$cumul_x <- df_thetaThigh$counts + 16
 }
 ```
 
-# A Bayesian approach to decision making in early development Oncology clinical trials {#b-dar background-iframe="raindropp0/dist/index.html"}
+# A Bayesian approach to decision making in early development clinical trials : An Open Source Solution {#b-dar background-iframe="raindropp0/dist/index.html"}
 
 [Audrey Yeo | Warszawa - Polska]{style="color: #8BDB81;"}
 [19 maja]{style="color: white;"}
@@ -190,7 +190,7 @@ df_thetaThigh$cumul_x <- df_thetaThigh$counts + 16
 \
 
 ::: center
-![](images/sydneyuni.jpeg){width="34%"} ![](images/rch.jpg){width="30%"}
+![](images/sydneyuni.jpeg){width="34%"} 
 ![](images/roche1.jpg){width="30%"}
 :::
 
@@ -212,9 +212,9 @@ df_thetaThigh$cumul_x <- df_thetaThigh$counts + 16
 :::
 ::::::
 
-# Early oncology trials and why `phase1b`?
+# Early clinical trials and why `phase1b`?
 
-## Objectives
+## Objectives {.smaller}
 
 :::::: columns
 ::: {.column width="40%"}
@@ -223,6 +223,8 @@ df_thetaThigh$cumul_x <- df_thetaThigh$counts + 16
 - Explore simulation studies using `ocPostprob`
 - Operating characteristics
 - Question and answer
+
+`phase1b` was built with [Good Software Engineering Practice for R Packages](https://openstatsware.github.io/shortcourse-iscb2025/).
 :::
 
 ```{r}
@@ -1790,6 +1792,8 @@ For `phase1b` see author list
   Vaccine Development, DIA BSWG F2F Meeting, Joint Statistician Meeting,
   Washington DC August 9th, 2022
 
+- Title page Artist [Rayhan Ahmed](https://codepen.io/author-rayhan)
+
 # Backup slides
 
 ## Operating Characteristics Table
@@ -2351,6 +2355,7 @@ Still concerning:
 - `ocPredprobDist()`
 - `ocRctPredprobDist()`
 
+
 When `decision1 = FALSE`, criteria for Decision 2 for Interim looks are
 
 :   
@@ -2358,6 +2363,7 @@ When `decision1 = FALSE`, criteria for Decision 2 for Interim looks are
 - Interim GO : `P ( success at final) > phiU`
 
 - Interim STOP : `P (failure at final ) > phiFu`
+
 
 When `decision1 = FALSE`, criteria for Decision 2 for Final looks are :
 

@@ -767,7 +767,7 @@
     "href": "2026_YEO_cen.html#objectives",
     "title": "",
     "section": "Objectives",
-    "text": "Objectives\n\n\n\nIntroduce Beta Binomial model\nExplore postprob and predprob\nExplore simulation studies using ocPostprob\nOperating characteristics\nQuestion and answer"
+    "text": "Objectives\n\n\n\nIntroduce Beta Binomial model\nExplore postprob and predprob\nExplore simulation studies using ocPostprob\nOperating characteristics\nQuestion and answer\n\nphase1b was built with Good Software Engineering Practice for R Packages."
   },
   {
     "objectID": "2026_YEO_cen.html#the-posterior-construction",
@@ -963,7 +963,7 @@
     "href": "2026_YEO_cen.html#some-more-references",
     "title": "",
     "section": "Some more references",
-    "text": "Some more references\n\nZeileis, Fisher, Hornik, Ihaka, McWhite, Murrell, Stauffer, Wilke (2020). colorspace: A Toolbox for Manipulating and Assessing Colors and Palettes. Journal of Statistical Software.\nPollock et al (2020). Safety and Efficacy of the BNT162b2 mRNA Covid-19 Vaccine. The New England Journal of Medicine. Vol. 383. No. 27, doi: 10.1056/NEJMoa203457\nRoychoudhury, S (2022) A Bayesian Group-sequential Design for COVID-19 Vaccine Development, DIA BSWG F2F Meeting, Joint Statistician Meeting, Washington DC August 9th, 2022"
+    "text": "Some more references\n\nZeileis, Fisher, Hornik, Ihaka, McWhite, Murrell, Stauffer, Wilke (2020). colorspace: A Toolbox for Manipulating and Assessing Colors and Palettes. Journal of Statistical Software.\nPollock et al (2020). Safety and Efficacy of the BNT162b2 mRNA Covid-19 Vaccine. The New England Journal of Medicine. Vol. 383. No. 27, doi: 10.1056/NEJMoa203457\nRoychoudhury, S (2022) A Bayesian Group-sequential Design for COVID-19 Vaccine Development, DIA BSWG F2F Meeting, Joint Statistician Meeting, Washington DC August 9th, 2022\nTitle page Artist Rayhan Ahmed"
   },
   {
     "objectID": "2026_YEO_cen.html#operating-characteristics-table",
