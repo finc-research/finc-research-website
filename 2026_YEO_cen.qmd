@@ -177,7 +177,7 @@ df_thetaThigh$cumul_x <- df_thetaThigh$counts + 16
 }
 ```
 
-# A Bayesian approach to decision making in early development clinical trials : An Open Source Solution {#b-dar background-iframe="raindropp0/dist/index.html"}
+# A Bayesian approach to decision making in early development clinical trials : An Open Source Solution {#crushingit background-iframe="raindropp0/dist/index.html"}
 
 [Audrey Yeo | Warszawa - Polska]{style="color: #8BDB81;"}
 [19 maja]{style="color: white;"}
