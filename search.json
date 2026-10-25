@@ -543,7 +543,7 @@
     "href": "2025_early_dev.html#concluding-remarks",
     "title": "",
     "section": "Concluding remarks",
-    "text": "Concluding remarks\n\n\n\n\nphase1b can be helpful to many therapeutic areas that use binary endpoint if beta priors are appropriate\nAcknowledgements to Daniel Sabanés Bové for mentorship. Past colleagues Isaac Gravestock, John Kirkpatrick, Craig Gower-Paige et al who collaborated and supported.\nIssue page \nContact    \nCode for this presentation \nSimilar presentation at ISCB46 & RoES Graz"
+    "text": "Concluding remarks\n\n\n\n\nphase1b can be helpful to many therapeutic areas that use binary endpoint if beta priors are appropriate\nIssue page \nContact    \nCode for this presentation \nSimilar presentation at ISCB46 & RoES Graz"
   },
   {
     "objectID": "2025_early_dev.html#license-info",
@@ -557,7 +557,7 @@
     "href": "2025_early_dev.html#references",
     "title": "",
     "section": "References",
-    "text": "References\n\nThall P F, Simon R (1994), Practical Guidelines for Phase IIB Clinical Trials, Biometrics, 50, 337-349\nLee J J, Liu D D (2008), A Predictive probability design for phase II cancer clinical trials, 5(2), 93-106, Clinical Trials\nYeo, A T, Sabanés Bové D, Elze M, Pourmohamad T, Zhu J, Lymp J, Teterina A (2024). Phase1b : Calculations for decisions on Phase 1b clinical trials. R package version 1.0.0, https://genentech.github.io/phase1b\nInclusive Speaker Orientation Linux Foundation"
+    "text": "References\n\nThall P F, Simon R (1994), Practical Guidelines for Phase IIB Clinical Trials, Biometrics, 50, 337-349\nLee J J, Liu D D (2008), A Predictive probability design for phase II cancer clinical trials, 5(2), 93-106, Clinical Trials\nSabanés Bové D, Elze M, Pourmohamad T, Zhu J, Lymp J, Teterina A, Yeo, A T, (2024). Phase1b : Calculations for decisions on Phase 1b clinical trials. R package version 1.0.0, https://genentech.github.io/phase1b\nInclusive Speaker Orientation Linux Foundation"
   },
   {
     "objectID": "2025_early_dev.html#some-more-references",
@@ -620,7 +620,7 @@
     "href": "2025_early_dev.html#predictive-posterior-probability-for-decision-2",
     "title": "",
     "section": "Predictive posterior probability for Decision 2",
-    "text": "Predictive posterior probability for Decision 2\nStill concerning:\n\npredprobDist\nocPredprobDist()\nocRctPredprobDist()\n\nWhen decision1 = FALSE, criteria for Decision 2 for Interim looks are :\n\nInterim GO : P ( success at final) &gt; phiU\nInterim STOP : P (failure at final ) &gt; phiFu\n\nWhen decision1 = FALSE, criteria for Decision 2 for Final looks are :\n\nFinal GO : P( response rate &gt; p0 | data) &gt; tT\nFinal STOP : P( response rate  &lt; p1 | data) &gt; tF"
+    "text": "Predictive posterior probability for Decision 2\nStill concerning:\n\npredprobDist\nocPredprobDist()\nocRctPredprobDist()\n\n\nWhen decision1 = FALSE, criteria for Decision 2 for Interim looks are\n\n\n\n\n\nInterim GO : P ( success at final) &gt; phiU\nInterim STOP : P (failure at final ) &gt; phiFu\n\nWhen decision1 = FALSE, criteria for Decision 2 for Final looks are :\n\nFinal GO : P( response rate &gt; p0 | data) &gt; tT\nFinal STOP : P( response rate  &lt; p1 | data) &gt; tF"
   },
   {
     "objectID": "2025_early_dev.html#posterior-probability-1",
