@@ -1709,7 +1709,7 @@ Features %>%
   kable_classic(lightable_options = "hover", html_font = "\"Source Sans Pro\", helvetica, sans-serif")
 ```
 
-## Concluding remarks {.smaller background-gradient="linear-gradient(to top, #F8FAB4, #A7AAE1)"}
+## Concluding remarks {.smaller}
 
 \
 
