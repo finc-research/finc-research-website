@@ -1055,5 +1055,12 @@
     "title": "",
     "section": "Posterior probability",
     "text": "Posterior probability\nConcerning:\n\npostprobDist()\nocPostprobDist()\nocRctPostprobDist()\n\nAt final, the criteria are:\n\nFinal GO : Pr( response rate &gt; p1 | data) &gt; tU\nFinal STOP : Pr( response rate &lt; p0 | data) &gt; tL"
+  },
+  {
+    "objectID": "2025_early_dev.html#licenseinfo",
+    "href": "2025_early_dev.html#licenseinfo",
+    "title": "",
+    "section": "License info",
+    "text": "License info\nPlease acknowledge authors and creators\n\n\nCreative Common License used \nFor phase1b see author list \nphase1b presentations, Audrey Yeo"
   }
 ]

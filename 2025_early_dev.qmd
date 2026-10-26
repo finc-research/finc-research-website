@@ -1733,7 +1733,7 @@ Code for this presentation
 Similar presentation at [ISCB46](https://iscb2025.info/) & [RoES
 Graz](https://www.ibs-roes.org/roes_2025.html)
 
-## License info {background-gradient="linear-gradient(to top, #F8FAB4, #A7AAE1)"}
+## License info {#licenseinfo}
 
 *Please acknowledge authors and creators*
 
